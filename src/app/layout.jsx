@@ -1,24 +1,15 @@
-import React from 'react';
-import { useLocation, Outlet } from 'react-router-dom';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
-import '../styles/global.css'; // Adjust the path if your styles folder is elsewhere
+import Footer from './components/footer';
+import './styles/global.css';
 
-
-const Layout = () => {
-  const { pathname } = useLocation();
-  const hideNavbar = pathname === '/' || pathname.startsWith('/quiz');
-
+export default function RootLayout({ children }) {
   return (
-    <>
-      {!hideNavbar && <Navbar />}
-      {!hideNavbar && <div className="nav-padding" />}
-      <div className="main-content">
-        <Outlet />
+    <html lang="en">
+      <body>
+        <main className="main-content">
+          {children}
+        </main>
         <Footer />
-      </div>
-    </>
+      </body>
+    </html>
   );
-};
-
-export default Layout;
+}
