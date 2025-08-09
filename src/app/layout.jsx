@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, Outlet } from 'react-router-dom';
-import Navbar from './navbar';
-import Footer from './footer';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import '../styles/global.css'; // Adjust the path if your styles folder is elsewhere
 
 
