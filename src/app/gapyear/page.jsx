@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/collegeguide.css'; // Use the guide-specific CSS for a cohesive look
+import '../../styles/collegeguide.css'; // Use the guide-specific CSS for a cohesive look
 
 const GapYear = () => (
   <div className="college-guide-container">
