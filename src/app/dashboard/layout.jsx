@@ -1,9 +1,9 @@
-import navbar from '../../../components/navbar';
+import Navbar from '../../../components/navbar';
 
 export default function DashboardLayout({ children }) {
   return (
     <>
-      <navbar />
+      <Navbar />
       <div className="nav-padding" />
       {children}
     </>
