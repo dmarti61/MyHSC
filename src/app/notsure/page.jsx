@@ -1,8 +1,8 @@
 // NotSure.js
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../styles/collegeguide.css'; // ADDED: Imports the base guide styles
-import '../styles/notsure.css';      // ADDED: Imports the specific layout styles
+import '../../styles/collegeguide.css'; // ADDED: Imports the base guide styles
+import '../../styles/notsure.css';      // ADDED: Imports the specific layout styles
 
 const NotSure = () => {
   return (
