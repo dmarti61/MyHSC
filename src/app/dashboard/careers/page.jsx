@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../../styles/collegeguide.css'; // <-- ADDED: Import the guide-specific CSS
+import '../../../styles/collegeguide.css'; // <-- ADDED: Import the guide-specific CSS
 
 const Careers = () => {
   return (
