@@ -42,7 +42,7 @@ const navItems = [
   },
 ];
 
-const Navbar = () => {
+const navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
