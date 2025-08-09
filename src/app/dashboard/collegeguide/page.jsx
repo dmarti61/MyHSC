@@ -1,6 +1,6 @@
 // src/components/CollegeGuide.js
 import React from 'react';
-import '../../styles/collegeguide.css'; // Assuming this path is correct for your styles
+import '../../../styles/collegeguide.css'; // Assuming this path is correct for your styles
 
 const CollegeGuide = () => (
   <div className="college-guide-container">
