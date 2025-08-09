@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/global.css';
+
 
 const JobSearch = () => (
   <div className="page-container">
