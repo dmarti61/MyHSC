@@ -1,7 +1,7 @@
-"use client"; 
+'use client';
 
-import React from "react";
-import { useRouter } from "next/navigation";
+import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const NotFound = () => {
   const router = useRouter();
@@ -17,7 +17,7 @@ const NotFound = () => {
         No magic spells needed to fix this, though. Just click below to get back
         to solid ground.
       </p>
-      <button onClick={() => router.push("/")}>
+      <button onClick={() => router.push('/')}>
         🏠 Return to Home Base
       </button>
     </div>
