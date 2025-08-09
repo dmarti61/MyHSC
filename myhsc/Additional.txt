@@ -1,0 +1,62 @@
+Website Improvement Recommendations for https://myhscounselor.com
+
+Audience: High school students (all grades), with focus on college prep and career pathways. Site monetized via Google Ads.
+
+Suggested Additions:
+
+1. Scholarships + Financial Aid Page (Separate & Regularly Updated)
+- Weekly/monthly updated scholarships (link to Fastweb, Going Merry, etc.)
+- FAFSA walkthrough PDF/video
+- State-specific grants and deadlines
+- Sample financial aid appeal letters
+
+2. Internships, Summer Programs & Volunteer Opportunities
+- Searchable/filterable table by state or career type
+- Links to national programs (e.g., NASA internships, HOBY, Google Code Next)
+- Tips for asking for internships or shadowing
+
+3. Study Skills + Test Prep Hub
+- Free SAT/ACT resources (Khan Academy, practice tests)
+- Study habit planners / time management templates
+- Focus/motivation tools for high schoolers (Pomodoro tracker, distraction blockers)
+
+4. Blog or Articles Section
+- Improves SEO and builds trust
+- Example posts:
+  - “What I Wish I Knew Freshman Year”
+  - “5 Things That Make a Resume Stand Out”
+  - “How to Choose Between College and a Trade”
+
+5. Success Stories or Spotlights
+- Inspires students, builds credibility
+- Short profiles of real students with different paths
+- Submission form for user stories
+
+6. Parent Portal (Optional)
+- PDF checklist for parents by grade
+- Conversation starters
+- Glossary of key terms (FAFSA, AP vs Dual Credit, etc.)
+
+7. Email Newsletter (Optional)
+- Monthly or weekly
+- Includes scholarships, deadlines, featured careers, tips
+- Tools: Mailchimp, ConvertKit, Buttondown
+
+8. Interactive Timeline or Checklist Tool
+- Visual guides by grade level or career goal
+  - College Prep (9th–12th)
+  - Workforce Entry Plan
+  - Gap Year Prep
+
+9. Expanded “Not Sure?” Guidance
+- Interactive “choose your path” style tool
+- FAQs for undecided students
+
+10. Educator/Counselor Toolkit Page
+- Printables: Career quiz, flyers, lesson plan guides
+- How to integrate site with students in classroom
+
+Next Steps (Optional Help):
+- Mockups of any pages above
+- Help creating mobile-friendly tables (e.g. scholarships)
+- Content calendar or blog SEO ideas

@@ -1,0 +1,65 @@
+MY HS COUNSELOR – LAUNCH CHECKLIST
+===============================
+
+DOMAIN & HOSTING SETUP
+-------------------------------
+✓ Registered domain at Namecheap
+✓ Update DNS settings to point domain to hosting provider
+✓ Enable SSL certificate (HTTPS) for secure connection
+
+FINAL WEBSITE FLOW CHECK
+-------------------------------
+✓ Quiz launches from homepage with onboarding animation
+✓ First-visit animation logic using localStorage
+✓ Navigation unlocks after quiz completion
+✓ Personality result page displays badge + CTA
+✓ Checklist page loads with:
+   - Type intro phrase
+   - College vs Trade fit table
+   - Tilted interest scale (legal scale style)
+   - “Still Not Sure?” button
+
+STYLING CHECK
+-------------------------------
+✓ Buttons styled with gradient and hover states
+✓ All pages mobile optimized and responsive
+✓ Color contrast meets accessibility standards
+✓ Fonts legible across devices
+
+TECHNICAL DEPLOYMENT
+-------------------------------
+✓ Push final code to hosting provider
+✓ Ensure all assets load correctly
+✓ Test live site on multiple browsers
+✓ Footer links: Privacy, Disclaimer, Contact working
+✓ XML sitemap deployed: /sitemap.xml
+
+ADSENSE INTEGRATION
+-------------------------------
+✓ Create AdSense account: https://www.google.com/adsense/start
+✓ Verify site ownership using meta tag or HTML file
+✓ Wait for approval (1–7 days)
+✓ Insert ad code into site (auto ads or manual placement)
+✓ Confirm rendering of ads on desktop & mobile
+
+GOOGLE SEARCH SETUP
+-------------------------------
+✓ Setup Google Search Console: https://search.google.com/search-console
+✓ Submit sitemap for indexing
+✓ Setup Google Analytics (GA4) and insert tracking code
+
+PDF & PRINTABLES
+-------------------------------
+✓ Launch Kits, Life Skills Templates, Talk Templates tested for printing
+✓ PDF download buttons work across devices
+
+FINAL PRE-LAUNCH TEST
+-------------------------------
+✓ Clear console logs and test data
+✓ Run site audit on performance & accessibility
+✓ Quiz and checklist flow tested live
+✓ Ad display verified
+✓ Ready for soft launch at 3:00 PM CST
+
+----------------------------------------
+© 2025 – My HS Counselor | Built for Guidance, Designed for Growth
