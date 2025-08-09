@@ -1,0 +1,99 @@
+/* About.css - Cohesive Marketing Revisions */
+
+/*
+   MARKETING GOAL: Create an about page that feels personal, credible, and
+   distinctly on-brand. The design should clearly communicate your value
+   proposition and build trust with students and parents.
+*/
+
+.about-page {
+  max-width: 800px; /* Wider for better content flow and a more modern feel */
+  margin: 3rem auto;
+  padding: 3rem 2rem; /* More generous padding */
+}
+
+.about-page h1 {
+  font-family: var(--font-heading);
+  color: var(--dark-blue-gray);
+  font-size: 3rem; /* Larger, more impactful heading */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-page h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-blue); /* Use the brand's primary blue */
+  text-align: center;
+}
+
+.about-intro-section {
+  text-align: center; /* Center the intro for a more welcoming tone */
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--medium-gray);
+}
+
+.what-makes-us-different {
+  background-color: var(--light-gray); /* Use the brand's clean, light gray */
+  border-radius: 16px;
+  padding: 3rem;
+  margin-top: 4rem; /* More space to make this section stand out */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.what-makes-us-different h2 {
+  color: var(--dark-blue-gray);
+}
+
+.what-makes-us-different ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.what-makes-us-different li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2.5em; /* More space for a bigger checkmark */
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: var(--medium-gray);
+}
+
+.what-makes-us-different li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem; /* Larger checkmark for emphasis */
+  font-weight: bold;
+  color: var(--success-green); /* Use the brand's success green */
+}
+
+.about-closing-statement {
+  font-size: 1.25rem; /* Larger, more prominent closing statement */
+  font-style: italic;
+  text-align: center;
+  margin-top: 4rem;
+  line-height: 1.6;
+  color: var(--dark-blue-gray);
+}
+
+.founder-signature {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 2rem;
+  color: var(--primary-blue);
+  font-family: var(--font-heading);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+  }
+}
