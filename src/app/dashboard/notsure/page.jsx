@@ -1,12 +1,12 @@
-// NotSure.js
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import '../../../styles/collegeguide.css'; // ADDED: Imports the base guide styles
-import '../../../styles/notsure.css';      // ADDED: Imports the specific layout styles
+'use client';
+
+import Link from 'next/link';
+import '../../../styles/collegeguide.css'; // Imports the base guide styles
+import '../../../styles/notsure.css';      // Imports the specific layout styles
 
 const NotSure = () => {
   return (
-    <div className="college-guide-container"> {/* CHANGED: Uses the base guide container class */}
+    <div className="college-guide-container">
       <h2 className="title">Not Sure What's Next? That's Totally Okay!</h2>
       <p className="intro-text">
         Feeling unsure after high school is completely normal. Most people don't have it all figured out, and that's a good thing! This page is here to help you slow down, explore your options, and find some calm without all the pressure. You're not behind—you're just taking a moment to get things right for you.
@@ -60,9 +60,9 @@ const NotSure = () => {
           <p className="exploration-step-text">
             Think of this as window shopping for your future. Click on a few careers that sound even mildly interesting. You don't have to choose anything right now—just see what's out there.
           </p>
-          <NavLink to="/explore-careers" className="cta-button">
+          <Link href="/explore-careers" className="cta-button">
             Start Exploring Careers
-          </NavLink>
+          </Link>
         </div>
 
         <div className="exploration-item">
@@ -75,29 +75,29 @@ const NotSure = () => {
           </p>
           <div className="pathway-links">
             <div className="pathway-item">
-              <NavLink to="/college-guide" className="pathway-link">
+              <Link href="/college-guide" className="pathway-link">
                 <strong>College:</strong> What's a typical 4-year degree timeline?
-              </NavLink>
+              </Link>
             </div>
             <div className="pathway-item">
-              <NavLink to="/trade" className="pathway-link">
+              <Link href="/trade" className="pathway-link">
                 <strong>Skilled Trades:</strong> How long are trade programs?
-              </NavLink>
+              </Link>
             </div>
             <div className="pathway-item">
-              <NavLink to="/direct-entry-careers" className="pathway-link">
+              <Link href="/direct-entry-careers" className="pathway-link">
                 <strong>Direct Entry:</strong> What jobs can you get right after high school?
-              </NavLink>
+              </Link>
             </div>
             <div className="pathway-item">
-              <NavLink to="/military" className="pathway-link">
+              <Link href="/military" className="pathway-link">
                 <strong>Military:</strong> What are the basic options and timeframes?
-              </NavLink>
+              </Link>
             </div>
             <div className="pathway-item">
-              <NavLink to="/gap-year" className="pathway-link">
+              <Link href="/gap-year" className="pathway-link">
                 <strong>Gap Year:</strong> What's it like to take a year off?
-              </NavLink>
+              </Link>
             </div>
           </div>
         </div>
@@ -110,9 +110,9 @@ const NotSure = () => {
           <p className="exploration-step-text">
             Money can be a big source of stress, but there are tons of options to help you pay for your next step, no matter what it is. Learn about scholarships, grants, and other financial aid resources.
           </p>
-          <NavLink to="/financial-aid" className="cta-button">
+          <Link href="/financial-aid" className="cta-button">
             Learn About Funding
-          </NavLink>
+          </Link>
         </div>
       </div>
 
@@ -124,9 +124,9 @@ const NotSure = () => {
       </p>
       <div className="final-cta">
         <p>Ready to get started?</p>
-        <NavLink to="/quiz" className="cta-button">
+        <Link href="/quiz" className="cta-button">
           Take the Quiz
-        </NavLink>
+        </Link>
       </div>
     </div>
   );
