@@ -1,4 +1,4 @@
-// pages/api/contact.js
+// functions/contact.js
 
 import { Resend } from 'resend';
 
