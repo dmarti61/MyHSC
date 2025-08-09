@@ -1,79 +1,53 @@
-// functions/contact.js
+// pages/api/contact.js
 
-export async function onRequest(context) {
-  if (context.request.method !== 'POST') {
-    return new Response(JSON.stringify({ status: 'error', message: 'Method Not Allowed' }), {
-      status: 405,
-      headers: { "Content-Type": "application/json" }
-    });
+import { Resend } from 'resend';
+
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ status: 'error', message: 'Method Not Allowed' });
   }
 
   try {
-    const formData = await context.request.formData();
-    const formObject = Object.fromEntries(formData);
+    const { firstName, lastName, email, howDidYouHear, siteRating, suggestionsFeedback, 'bot-field': botField } = req.body;
 
-    if (formObject['bot-field']) {
+    if (botField) {
       console.log('Bot detected, submission blocked.');
-      return new Response(JSON.stringify({ status: 'success' }), {
-        headers: { "Content-Type": "application/json" },
-      });
+      return res.status(200).json({ status: 'success' });
     }
 
-    const { RESEND_API_KEY, CONTACT_EMAIL } = context.env;
-
-    if (!RESEND_API_KEY || !CONTACT_EMAIL) {
-      console.error('API key or recipient email not configured.');
-      return new Response(JSON.stringify({ status: 'error', message: 'Server configuration error' }), {
-        headers: { "Content-Type": "application/json" },
-        status: 500,
-      });
-    }
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const emailBody = `
       New Contact Form Submission:
       ---------------------------
-      First Name: ${formObject.firstName || 'N/A'}
-      Last Name: ${formObject.lastName || 'N/A'}
-      Email: ${formObject.email || 'N/A'}
-      How did you hear about us?: ${formObject.howDidYouHear || 'N/A'}
-      Site Rating: ${formObject.siteRating || 'N/A'}
+      First Name: ${firstName || 'N/A'}
+      Last Name: ${lastName || 'N/A'}
+      Email: ${email || 'N/A'}
+      How did you hear about us?: ${howDidYouHear || 'N/A'}
+      Site Rating: ${siteRating || 'N/A'}
       Suggestions/Feedback:
-      ${formObject.suggestionsFeedback || 'N/A'}
+      ${suggestionsFeedback || 'N/A'}
     `;
 
-    const resendResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${RESEND_API_KEY}`
-      },
-      body: JSON.stringify({
-        from: `onboarding@resend.dev`,
-        to: [CONTACT_EMAIL],
-        subject: "New Contact Form Submission",
-        html: `<pre>${emailBody}</pre>`,
-      }),
+    const resendResponse = await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: process.env.CONTACT_EMAIL,
+      subject: 'New Contact Form Submission',
+      html: `<pre>${emailBody}</pre>`,
     });
 
-    if (resendResponse.ok) {
+    if (resendResponse.data) {
       console.log('Email sent successfully via Resend.');
-      return new Response(JSON.stringify({ status: 'success' }), {
-        headers: { "Content-Type": "application/json" },
-      });
+      return res.status(200).json({ status: 'success' });
     } else {
-      const resendError = await resendResponse.json();
-      console.error('Error sending email via Resend:', resendError);
-      return new Response(JSON.stringify({ status: 'error', message: resendError.message }), {
-        headers: { "Content-Type": "application/json" },
-        status: resendResponse.status,
+      console.error('Error sending email via Resend:', resendResponse.error);
+      return res.status(resendResponse.error.statusCode || 500).json({
+        status: 'error',
+        message: resendResponse.error.message || 'Error sending email'
       });
     }
-
   } catch (error) {
     console.error('Form submission error:', error);
-    return new Response(JSON.stringify({ status: 'error', message: 'Internal server error' }), {
-      headers: { "Content-Type": "application/json" },
-      status: 500,
-    });
+    return res.status(500).json({ status: 'error', message: 'Internal server error' });
   }
 }
