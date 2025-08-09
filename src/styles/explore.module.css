@@ -1,0 +1,113 @@
+/* explorecareers.module.css - Cohesive Marketing Revisions */
+
+/*
+   MARKETING GOAL: Create a clean, organized, and inviting layout for
+   career exploration. The design should feel clear and manageable,
+   reinforcing the idea of a structured "roadmap" rather than a confusing list.
+*/
+
+/* Assume global styles and variables are loaded */
+
+.container {
+  padding: 3rem 1.5rem; /* More generous padding for a spacious feel */
+  max-width: 1100px; /* Wider container for a modern look */
+  margin: 0 auto;
+}
+
+.intro {
+  font-size: 1.25rem; /* Larger, more welcoming intro text */
+  margin-bottom: 3rem; /* More space to separate from the content */
+  color: var(--medium-gray); /* Use the brand's body text color */
+  text-align: center;
+  line-height: 1.6;
+}
+
+.section {
+  margin-bottom: 4rem; /* Increased spacing between major sections */
+}
+
+.pathway {
+  font-family: var(--font-heading); /* Use the brand's heading font */
+  font-size: 2rem; /* Larger, more impactful pathway titles */
+  font-weight: 700;
+  color: var(--dark-blue-gray); /* Use the brand's heading color */
+  border-bottom: 2px solid var(--border-color); /* Soft border color */
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider min-width for cards */
+  gap: 2rem; /* More space between cards */
+}
+
+.card {
+  border: 1px solid var(--border-color); /* Use the brand's soft border color */
+  border-radius: 12px; /* More rounded corners */
+  padding: 1.5rem; /* Increased padding inside cards */
+  background-color: #ffffff; /* Clean white background */
+  transition: box-shadow 0.3s ease, transform 0.2s ease; /* Add transform for lift effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Softer, more pronounced shadow */
+  transform: translateY(-5px); /* Gentle lift on hover */
+}
+
+.card h4 {
+  font-family: var(--font-heading);
+  margin: 0 0 0.5rem;
+  color: var(--primary-blue); /* Use the brand's primary blue for titles */
+  font-size: 1.25rem; /* Larger, more readable heading */
+  font-weight: 600;
+}
+
+.card p {
+  font-family: var(--font-body);
+  margin: 0.5rem 0;
+  font-size: 1rem; /* Consistent font size for body text */
+  line-height: 1.7; /* Improved line height */
+  color: var(--medium-gray);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Mobile-Specific Adjustments                       */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .section {
+    margin-bottom: 3rem;
+  }
+
+  .pathway {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .card h4 {
+    font-size: 1.15rem;
+  }
+}

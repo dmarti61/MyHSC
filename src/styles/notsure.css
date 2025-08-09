@@ -1,0 +1,207 @@
+/* notsure.css - Specific styling for the "Not Sure" page */
+
+/* --- Page-specific Typography & Containers --- */
+.title {
+    font-family: var(--font-heading);
+    color: var(--dark-blue-gray);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: var(--medium-gray);
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 3rem auto;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    color: var(--primary-blue);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-intro {
+    font-family: var(--font-body);
+    color: var(--medium-gray);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.conclusion-text {
+    font-family: var(--font-body);
+    color: var(--medium-gray);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 4rem 0;
+}
+
+/* --- Action List (Breathing Steps) --- */
+.action-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.action-item {
+    flex-basis: 30%;
+    min-width: 250px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.action-item:hover {
+    transform: translateY(-5px);
+}
+
+.action-step {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-blue-gray);
+}
+
+.step-number {
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    color: var(--secondary-blue);
+    margin-right: 0.5rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* --- Call to Action Container --- */
+.cta-container {
+    text-align: center;
+    background-color: #eaf2f8;
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-top: 3rem;
+}
+
+.cta-title {
+    font-family: var(--font-heading);
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-text {
+    color: var(--dark-blue-gray);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- Exploration Steps --- */
+.exploration-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.exploration-item {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.exploration-step-title {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    color: var(--dark-blue-gray);
+    margin-bottom: 1rem;
+}
+
+.exploration-step-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--medium-gray);
+    min-height: 50px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--success-green);
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 1.5rem;
+}
+
+.cta-button:hover {
+    background-color: #28a745;
+}
+
+/* --- Pathway Links --- */
+.pathway-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.pathway-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.pathway-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.pathway-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.pathway-link:hover {
+    color: var(--dark-blue-gray);
+    text-decoration: underline;
+}
+
+.pathway-link strong {
+    font-weight: 700;
+    color: var(--dark-blue-gray);
+}
+
+/* --- Final Call to Action --- */
+.final-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.final-cta p {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--dark-blue-gray);
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,263 @@
+/* collegeguide.css - Cohesive Marketing Revisions */
+
+/*
+   MARKETING GOAL: Present complex information in a clear, organized, and
+   encouraging manner. The design should feel like a trusted companion,
+   making a daunting process seem manageable and logical.
+*/
+
+/* --- General Container and Typography --- */
+.college-guide-container {
+  max-width: 1000px; /* Increased max-width for better content flow */
+  margin: 3rem auto;
+  padding: 3rem;
+  font-family: var(--font-body); /* Consistent body font */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  line-height: 1.7; /* Increased for optimal readability */
+  color: var(--medium-gray); /* Consistent body text color */
+}
+
+.college-guide-container h2 {
+  font-family: var(--font-heading); /* Consistent heading font */
+  color: var(--dark-blue-gray); /* Use the brand's main heading color */
+  font-size: 2.8rem; /* Larger and more impactful */
+  text-align: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 3px solid var(--border-color); /* Use a soft brand border color */
+  padding-bottom: 1rem;
+}
+
+.college-guide-container h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-blue); /* Consistent primary brand blue for section headings */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-blue); /* A clear, branded separator */
+}
+
+/* --- Monthly Timeline Styling --- */
+.college-guide-container h4 {
+  font-family: var(--font-heading);
+  background-color: #eaf2f8; /* A very light brand-blue background */
+  color: var(--primary-blue);
+  /* FIX: Adjusted padding-left to make room for the calendar emoji */
+  padding: 1rem 2rem 1rem 4rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-left: 6px solid var(--primary-blue);
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.college-guide-container h4::before {
+  content: '📅';
+  position: absolute;
+  /* FIX: Adjusted left position to be slightly more from the border */
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  color: var(--dark-blue-gray); /* Use dark blue-gray for the prominent intro */
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.pathway-note,
+.military-interest-note {
+  background-color: #f0f8ff; /* A clean, light blue */
+  border-left: 4px solid var(--secondary-blue); /* Use the vibrant blue for a friendly accent */
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--dark-blue-gray);
+  line-height: 1.6;
+}
+
+.pathway-note a,
+.military-interest-note a {
+  font-weight: 700;
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 4rem 0;
+}
+
+/* --- List Items and Bullet Points --- */
+.college-guide-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.college-guide-container ul li {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 2em; /* Added padding for the custom bullet */
+}
+
+.college-guide-container ul li::before {
+  content: '✓'; /* A simple, clear checkmark */
+  position: absolute;
+  left: 0;
+  color: var(--success-green); /* Use the brand's success green */
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 1;
+  top: 0.15em;
+}
+
+.college-guide-container ul li strong {
+  color: var(--dark-blue-gray);
+  font-weight: 600;
+}
+
+/* --- Specific Text Blocks --- */
+.why-it-matters {
+  font-style: italic;
+  color: var(--medium-gray);
+  background-color: #f8f9fa; /* A clean, subtle gray */
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--border-color);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.advice-box {
+  background-color: #fefbec; /* A soft, calming yellow */
+  border-left: 5px solid #fec64f; /* A warm, friendly yellow border */
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #5a5a5a;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.choice-considerations h4 {
+  font-family: var(--font-body); /* Use body font for subheadings */
+  font-weight: 600;
+  background-color: transparent;
+  border-left: none;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin-top: 2rem;
+  padding: 0;
+  box-shadow: none;
+}
+.choice-considerations h4::before {
+  content: '';
+}
+
+/* --- Links --- */
+a {
+  color: var(--secondary-blue);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+/* --- Quote Block --- */
+.quote-block {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--medium-gray);
+  padding: 1.5rem 3rem;
+  border-left: 5px solid var(--border-color);
+  background-color: #fefefe;
+  border-radius: 12px;
+}
+
+.quote-block::before {
+  content: '❝';
+  display: block;
+  font-size: 3.5rem;
+  color: var(--secondary-blue);
+  margin-bottom: -1rem;
+}
+
+.quote-block::after {
+  content: '❞';
+  display: block;
+  font-size: 3.5rem;
+  color: var(--secondary-blue);
+  margin-top: -1rem;
+  text-align: right;
+}
+
+/* Specific styling for the example within Essay Pro Tips */
+.essay-pro-tips .example {
+  background-color: #f8f9fa;
+  border-left: 4px solid var(--border-color);
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  font-style: normal;
+  color: var(--dark-blue-gray);
+  border-radius: 8px;
+}
+
+/* --- Call to Action Link --- */
+.cta-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+}
+
+.cta-link a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--secondary-blue);
+  color: #ffffff; /* White text for contrast */
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cta-link a:hover {
+  background-color: var(--primary-blue);
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .college-guide-container {
+    padding: 2rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+}

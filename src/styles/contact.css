@@ -1,0 +1,160 @@
+/* contact.css - Cohesive Marketing Revisions */
+
+/*
+   MARKETING GOAL: Create a contact form that feels professional, secure, and
+   easy to complete. The design should build trust and encourage users to reach
+   out, reflecting the brand's friendly yet reliable tone.
+*/
+
+.cloudflare-form {
+  max-width: 700px; /* Wider to feel more spacious and modern */
+  margin: 3rem auto; /* More vertical space to stand out */
+  padding: 3rem; /* Increased padding for a premium feel */
+  background-color: #ffffff; /* Clean white background for clarity */
+  border-radius: 16px; /* Softer, more modern rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* A deeper, softer shadow */
+  font-family: var(--font-body); /* Consistent font */
+}
+
+/* Form group styling for spacing and layout */
+.form-group {
+  margin-bottom: 2rem; /* More space between form elements */
+}
+
+/* Label styling */
+label {
+  display: block;
+  font-weight: 600; /* Bolder weight for clarity */
+  margin-bottom: 0.75rem; /* Increased space below label */
+  color: var(--dark-blue-gray); /* Use the brand's professional dark gray */
+  font-family: var(--font-heading); /* Use heading font for labels to feel more prominent */
+  font-size: 1.1rem;
+}
+
+/* Required field indicator */
+.required {
+  color: var(--primary-blue); /* Use a brand color for a more positive, less alarming feel */
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+/* Input, textarea, and select styling */
+.cloudflare-form input[type="text"],
+.cloudflare-form input[type="email"],
+.cloudflare-form textarea,
+.cloudflare-form select {
+  width: 100%;
+  padding: 1rem; /* More padding for a better touch target and cleaner look */
+  border: 1px solid var(--border-color); /* Use the brand's soft border color */
+  border-radius: 8px; /* More rounded corners */
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.cloudflare-form input[type="text"]:focus,
+.cloudflare-form input[type="email"]:focus,
+.cloudflare-form textarea:focus,
+.cloudflare-form select:focus {
+  outline: none;
+  border-color: var(--primary-blue); /* Consistent focus color */
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.2); /* Soft, brand-aligned focus ring */
+}
+
+/* Grouping for First Name and Last Name */
+.form-group-container {
+  display: flex;
+  gap: 2rem; /* More space between fields */
+}
+
+.form-group-container .form-group {
+  flex: 1;
+}
+
+/* Radio button group styling */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.radio-group label {
+  font-weight: 500; /* Lighter weight for radio labels */
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* More space between radio button and text */
+  font-family: var(--font-body);
+  color: var(--medium-gray);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Button styling */
+.cloudflare-form button {
+  width: 100%;
+  padding: 1.25rem; /* Larger button for a stronger CTA */
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 50px; /* A full pill shape */
+  font-size: 1.15rem; /* Larger font for CTA text */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cloudflare-form button:hover:not(:disabled) {
+  background-color: var(--secondary-blue);
+  transform: translateY(-3px); /* More pronounced lift effect */
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+}
+
+.cloudflare-form button:disabled {
+  background-color: #aeb4be; /* A brand-aligned disabled color */
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Error message styling */
+.form-error-message {
+  color: #c0392b; /* A more professional, less generic red */
+  margin-top: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Fieldset and legend styling for radio buttons */
+fieldset {
+  border: 1px solid var(--border-color);
+  padding: 2rem; /* Increased padding */
+  border-radius: 12px;
+}
+
+legend {
+  font-weight: 700;
+  padding: 0 0.75rem;
+  color: var(--dark-blue-gray);
+  font-family: var(--font-heading);
+}
+
+.optional {
+  color: var(--medium-gray);
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .cloudflare-form {
+    padding: 2rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+  .form-group-container {
+    flex-direction: column;
+    gap: 0;
+  }
+}

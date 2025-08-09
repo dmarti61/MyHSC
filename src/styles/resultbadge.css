@@ -1,0 +1,196 @@
+/* resultbadge.css - Cohesive Marketing Revisions */
+
+/*
+   MARKETING GOAL: This is the user's "Aha!" moment. The design must be clean,
+   encouraging, and easy to read. The layout should guide the user's eye from
+   their core identity to the actionable steps (strengths, careers, majors).
+*/
+
+.result-badge-container {
+  max-width: 800px; /* Wider for a more substantial feel */
+  margin: 3rem auto; /* More vertical space to highlight its importance */
+  padding: 3rem; /* Generous padding for a premium, spacious look */
+  font-family: 'Inter', sans-serif; /* Consistent with previous file */
+  background: #f8f9fa; /* A very light gray to feel clean and modern */
+  border-radius: 16px; /* Increased rounded corners for a softer feel */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* A deeper, softer shadow */
+  color: #333;
+}
+
+/* --- MBTI Type & Vibe Section (Core Identity) --- */
+.mbti-type {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem; /* Much larger and more impactful */
+  color: #2980b9; /* Use the brand's primary blue for consistency and trust */
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px; /* Positive letter-spacing for a sophisticated feel */
+  font-weight: 900; /* Extra bold to be the centerpiece */
+  text-transform: uppercase; /* Use all caps for a powerful statement */
+}
+
+.vibe {
+  font-size: 1.25rem;
+  text-align: center;
+  color: #5d6e87; /* A professional blue-gray */
+  margin-bottom: 3rem; /* More space to separate this section */
+  font-weight: 500; /* Medium weight for readability */
+}
+
+/* --- Content Sections (Actionable Guidance) --- */
+.result-badge-container h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; /* Larger headings for stronger visual hierarchy */
+  color: #2c3e50; /* Darker, more professional blue-gray */
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e6f0; /* Softer border */
+  padding-bottom: 10px; /* More space below the line */
+  font-weight: 700;
+}
+
+/* --- Strengths Section --- */
+.strengths-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Wider columns */
+  gap: 1rem; /* More space between items */
+}
+
+.strengths-list li {
+  background: #eaf2f8; /* A very light blue to feel clean and positive */
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Career Recommendations Section --- */
+.career-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.career-item {
+  background: #ffffff; /* White background for separation from container */
+  border: 1px solid #e0e6f0;
+  border-radius: 12px;
+  padding: 1.5rem; /* Increased padding */
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease; /* Transition all properties for smoothness */
+}
+
+.career-item:hover {
+  transform: translateY(-5px); /* More pronounced hover effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.career-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.highlighted-career .career-name {
+  color: #27ae60; /* Use a confident, professional green */
+  font-size: 1.3rem; /* Slightly larger */
+}
+
+.pathway {
+  font-size: 0.95rem;
+  color: #8c9bb7;
+  font-style: normal; /* Remove italics for a more direct tone */
+  font-weight: 400;
+  margin-left: 0; /* Remove indent */
+  margin-bottom: 0.5rem;
+}
+
+.career-description {
+  font-size: 1rem; /* Larger font size for better readability */
+  color: #5d6e87;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* --- College Majors Section --- */
+.major-list {
+  list-style: none; /* Custom bullet for majors */
+  padding: 0; /* REMOVED padding-left: 20px, which caused the misalignment */
+  margin: 0; /* ADDED: Removes default browser margin */
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.major-list li {
+  background: #eaf2f8;
+  padding: 0.5rem 1rem;
+  border-radius: 20px; /* Pill-shaped for a clean, modern look */
+  font-size: 0.95rem;
+  color: #5d6e87;
+}
+
+/* --- Retake Button (Actionable CTA) --- */
+.retake-quiz {
+  text-align: center; /* NEW: This container centers the button inside it */
+}
+
+.retake-btn {
+  display: inline-block; /* Change to inline-block for better centering control */
+  padding: 1rem 2.5rem; /* Larger, more substantial button */
+  background-color: #3498db; /* Use a more vibrant blue that matches the branding */
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px; /* A full pill shape */
+  cursor: pointer;
+  margin-top: 4rem; /* More space to separate it */
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+}
+
+.retake-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .result-badge-container {
+    padding: 2rem;
+    margin: 2rem 1rem;
+  }
+
+  .mbti-type {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .result-badge-container {
+    padding: 1.5rem;
+  }
+
+  .mbti-type {
+    font-size: 2rem;
+  }
+
+  .strengths-list {
+    grid-template-columns: 1fr;
+  }
+
+  .retake-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}

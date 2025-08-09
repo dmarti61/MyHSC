@@ -1,0 +1,79 @@
+/* sharecard.css - Cohesive Marketing Revisions */
+
+/*
+   MARKETING GOAL: Create a sense of trust and confidence. The share card should feel
+   like a valuable, encouraging resource, not just a generic social button.
+   The updated colors and typography aim to reflect the brand's mission of clarity and guidance.
+*/
+
+.share-card {
+  background-color: #ffffff; /* Use a clean white for clarity and a fresh feel */
+  border: 1px solid #e0e6f0; /* Softer, more professional border */
+  border-radius: 12px; /* Slightly more rounded corners for a modern, friendly look */
+  padding: 2rem; /* Increase padding for a more premium, spacious feel */
+  margin: 3rem auto; /* More vertical space to make it stand out */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* More defined but still soft shadow */
+  max-width: 550px; /* Increase max-width for better content flow */
+  text-align: center;
+}
+
+.share-card h3 {
+  font-family: 'Poppins', sans-serif; /* Use a professional, readable font */
+  font-size: 1.75rem; /* Larger, more prominent heading */
+  margin-bottom: 1rem;
+  color: #2c3e50; /* A dark, professional blue-gray */
+  font-weight: 700; /* Bolder to draw attention */
+}
+
+.share-card p {
+  font-family: 'Inter', sans-serif; /* A clear, modern font for body text */
+  margin: 1rem 0;
+  color: #616e87; /* A soft, readable gray that complements the heading */
+  line-height: 1.6; /* Improved line height for better readability */
+}
+
+.share-card-button {
+  background-color: #2980b9; /* A professional, deep blue that signifies trust */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem; /* More padding to make the button feel more substantial */
+  font-size: 1.15rem; /* Larger font for call-to-action */
+  font-weight: 600; /* Semibold to stand out */
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease; /* Transition all properties for a smoother effect */
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.25); /* Shadow matching the new color */
+}
+
+.share-card-button:hover {
+  background-color: #3498db; /* Lighter shade on hover for a subtle lift */
+  transform: translateY(-3px); /* More pronounced lift effect */
+  box-shadow: 0 6px 15px rgba(41, 128, 185, 0.35);
+}
+
+.share-card-button:active {
+  background-color: #21618c; /* Darker shade on active/press */
+  transform: translateY(0);
+}
+
+.share-card-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #95a5a6; /* A subtle gray for secondary information */
+  margin-top: 2rem; /* More space to separate from the main CTA */
+}
+
+@media (max-width: 600px) {
+  .share-card {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+    max-width: calc(100% - 2rem);
+  }
+
+  .share-card-button {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 1.1rem;
+  }
+}

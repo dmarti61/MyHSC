@@ -1,0 +1,37 @@
+/* footer.css - Cohesive Marketing Revisions */
+
+/*
+   MARKETING GOAL: Create a clean, professional, and trustworthy footer.
+   It should feel like a solid conclusion to the user's journey on a page,
+   reinforcing the brand's stability and reliability with consistent styling.
+*/
+
+.site-footer {
+  background-color: var(--dark-blue-gray); /* Use the brand's primary dark color */
+  color: #e0e6f0; /* A soft, light gray for high contrast and readability */
+  padding: 2.5rem 2rem; /* Increased padding for a more substantial feel */
+  margin-top: 5rem; /* More space to separate it from the main content */
+  font-size: 0.95rem; /* Slightly larger font for better readability */
+  font-family: var(--font-body); /* Consistent with the body text */
+  text-align: center;
+  left: 0;
+  width: 100%; /* Ensure it spans the full width */
+}
+
+.site-footer .footer-content-wrapper {
+  max-width: 1200px; /* A consistent max-width for content */
+  margin: 0 auto;
+}
+
+.site-footer .disclaimer {
+  margin-bottom: 0.75rem; /* More space below the disclaimer */
+  line-height: 1.6; /* Improved line height for readability */
+  max-width: 800px; /* Constrain text width for better legibility */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-footer .copyright {
+  font-size: 0.85rem; /* Slightly larger for clarity */
+  color: #a0a8b4; /* A soft, subtle gray for secondary text */
+}
