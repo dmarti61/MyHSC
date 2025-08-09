@@ -1,6 +1,8 @@
 'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import '../styles/navbar.css';
 
 const navItems = [
@@ -43,7 +45,7 @@ const navItems = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const location = useLocation();
+  const pathname = usePathname();
   const hamburgerRef = useRef(null);
   const closeBtnRef = useRef(null);
   const navbarRef = useRef(null);
@@ -76,7 +78,7 @@ const Navbar = () => {
 
   useEffect(() => {
     closeMenuAndDropdowns();
-  }, [location.pathname]);
+  }, [pathname]);
 
   useEffect(() => {
     const handleEscKey = (e) => {
@@ -89,7 +91,7 @@ const Navbar = () => {
   }, []);
 
   const hasActiveChild = (item) =>
-    item.children?.some((child) => location.pathname === child.path);
+    item.children?.some((child) => pathname === child.path);
 
   const toggleDropdown = (id) => {
     setActiveDropdown((prev) => (prev === id ? null : id));
@@ -103,7 +105,7 @@ const Navbar = () => {
         aria-hidden="true"
       />
       <div className="navbar-header">
-        <NavLink to="/" className="navbar-logo-link" aria-label="Home">
+        <Link href="/" className="navbar-logo-link" aria-label="Home">
           <img 
             src="/logo.png" 
             alt="My HS Counselor Logo" 
@@ -112,7 +114,7 @@ const Navbar = () => {
             height="40"
             loading="eager"
           />
-        </NavLink>
+        </Link>
 
         <button
           ref={hamburgerRef}
@@ -195,30 +197,28 @@ const Navbar = () => {
               >
                 {item.children.map((child) => (
                   <li key={child.path} role="none">
-                    <NavLink
-                      to={child.path}
+                    <Link
+                      href={child.path}
                       role="menuitem"
                       tabIndex={isMenuOpen ? 0 : -1}
-                      className={({ isActive }) => isActive ? 'active' : ''}
+                      className={pathname === child.path ? 'active' : ''}
                       onClick={closeMenuAndDropdowns}
                     >
                       {child.label}
-                    </NavLink>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </>
           ) : (
-            <NavLink
-              to={item.path}
+            <Link
+              href={item.path}
               role="menuitem"
-              className={({ isActive }) =>
-                `nav-top-level-item ${isActive ? 'active-item' : ''}`
-              }
+              className={`nav-top-level-item ${pathname === item.path ? 'active-item' : ''}`}
               onClick={closeMenuAndDropdowns}
             >
               {item.label}
-            </NavLink>
+            </Link>
           )}
         </li>
       );
