@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import questions from '../../data/questions';
+import { useRouter } from 'next/navigation'; // Import the Next.js router
+import questions from '../../lib/questions'; // Updated import path
 import QuestionCard from './questioncard';
 import ProgressBar from './progressbar';
 
@@ -17,7 +19,7 @@ const Quiz = () => {
   const [questionKey, setQuestionKey] = useState(0);
   const timerRef = useRef(null);
 
-  const navigate = useNavigate();
+  const router = useRouter(); // Use the Next.js router
 
   // The handleAnswer function now receives the letter directly from QuestionCard
   const handleAnswer = (letter) => {
@@ -37,7 +39,9 @@ const Quiz = () => {
           type: result,
           expires: new Date().getTime() + 24 * 60 * 60 * 1000,
         }));
-        navigate('/preferences', { state: { mbtiType: result } });
+        
+        // Use router.push to navigate and pass the mbtiType as a query parameter
+        router.push(`/preferences?mbtiType=${result}`);
       } else {
         setStep(prev => prev + 1);
         setQuestionKey(prev => prev + 1);
