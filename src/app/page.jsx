@@ -1,12 +1,13 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const Home = () => {
   const [hasResult, setHasResult] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
+    // This logic runs only on the client side
     const hasVisited = localStorage.getItem('hasVisited');
     if (!hasVisited) {
       localStorage.setItem('hasVisited', 'true');
@@ -25,9 +26,9 @@ const Home = () => {
     }
   }, []);
 
-  const handleStartQuiz = () => navigate('/quiz');
-  const handleViewResults = () => navigate('/results');
-  const handleExploreCareers = () => navigate('/explore-careers');
+  const handleStartQuiz = () => router.push('/quiz');
+  const handleViewResults = () => router.push('/results');
+  const handleExploreCareers = () => router.push('/explore-careers');
 
   return (
     <main className="home" role="main">
