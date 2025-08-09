@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/global.css';
 
 const Home = () => {
   const [hasResult, setHasResult] = useState(false);
