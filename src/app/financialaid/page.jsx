@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/global.css'; // Assuming you have a global CSS for consistent styling
 
 const FinancialAid = () => (
   <div className="page-container">
