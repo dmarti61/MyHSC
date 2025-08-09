@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const questions = [
   {
@@ -35,9 +37,9 @@ const questions = [
 ];
 
 const PreferenceQuiz = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const mbtiType = location.state?.mbtiType;
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const mbtiType = searchParams.get('mbtiType');
 
   const [answers, setAnswers] = useState({});
 
@@ -51,12 +53,9 @@ const PreferenceQuiz = () => {
         data: answers,
         expires: expirationTime,
     }));
-    navigate('/results', {
-      state: {
-        mbtiType,
-        preferences: answers
-      }
-    });
+    
+    // Use useRouter to navigate and pass data via query parameters
+    router.push(`/results?mbtiType=${mbtiType}&preferences=${JSON.stringify(answers)}`);
   };
 
   return (
