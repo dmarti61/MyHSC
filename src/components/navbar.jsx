@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // Import the Next.js Image component
 import { usePathname } from 'next/navigation';
 import '../styles/navbar.css';
 
@@ -42,7 +43,7 @@ const navItems = [
   },
 ];
 
-const navbar = () => {
+const Navbar = () => { // Renamed the component to Navbar
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
@@ -106,13 +107,13 @@ const navbar = () => {
       />
       <div className="navbar-header">
         <Link href="/" className="navbar-logo-link" aria-label="Home">
-          <img 
+          <Image 
             src="/logo.png" 
             alt="My HS Counselor Logo" 
             className="navbar-logo"
-            width="120"
-            height="40"
-            loading="eager"
+            width={120}
+            height={40}
+            priority={true} // Use priority instead of loading="eager" for LCP
           />
         </Link>
 
@@ -226,4 +227,4 @@ const navbar = () => {
   }
 };
 
-export default navbar;
+export default Navbar; // Export the renamed component
