@@ -1,6 +1,6 @@
 // src/components/twoyear.js
 import React from 'react';
-import '../styles/collegeguide.css'; // Reusing the same styles for consistency
+import '../../styles/collegeguide.css'; // Reusing the same styles for consistency
 
 const TwoYear = () => (
   <div className="college-guide-container">
