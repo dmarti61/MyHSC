@@ -1,10 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import '../../../styles/collegeguide.css'; // <-- ADDED: Import the guide-specific CSS
+'use client';
+
+import Link from 'next/link';
+import '../../../styles/collegeguide.css'; // <-- Import the guide-specific CSS
 
 const Careers = () => {
   return (
-    <section className="college-guide-container"> {/* <-- CHANGED: Reusing the main container class */}
+    <section className="college-guide-container">
       <h1>Your Future Starts Now: High School Grads, No College Degree Needed!</h1>
       <p className="intro">
         Congratulations, high school graduates! You've reached a major milestone, and now, an exciting world of career possibilities awaits you – even without a four-year college degree. Many rewarding paths offer direct entry, on-the-job training, and excellent growth potential. All it takes is a clear plan, a willingness to learn, and the determination to build a successful future.
@@ -37,9 +38,9 @@ const Careers = () => {
           <li>**Pathways:** Become a journeyman, specialize in a niche, earn certifications, or even start your own business.</li>
         </ul>
         <p className="cta-link">
-          <NavLink to="/trade">
+          <Link href="/trade">
             Discover more about Trade School here!
-          </NavLink>
+          </Link>
         </p>
       </div>
 
@@ -55,7 +56,7 @@ const Careers = () => {
               <li>**Warehouse Associate/Worker:** Handle shipping, receiving, and inventory.</li>
               <li>**Package Sorter/Handler:** Sort and prepare packages for delivery.</li>
               <li>**Local Delivery Driver (Non-CDL):** Deliver goods using smaller vehicles (e.g., vans, cars).</li>
-              <li>**Forklift Operator:** Operate forklifts to move materials (often requires certification, which employers may provide).</li>
+              <li>**Forklift Operator:** Operate forkllifts to move materials (often requires certification, which employers may provide).</li>
               <li>**Order Picker/Packer:** Fulfill customer orders in a warehouse setting.</li>
               <li>**Dispatcher Assistant:** Support dispatchers in coordinating routes and schedules.</li>
               <li>**Freight Handler:** Load and unload cargo.</li>
