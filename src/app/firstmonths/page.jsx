@@ -1,6 +1,5 @@
 // src/pages/FirstMonthsGuide.js
 import React from 'react';
-import '../styles/global.css';
 
 const FirstMonths = () => (
   <div className="page-container">
