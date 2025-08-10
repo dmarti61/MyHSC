@@ -1,6 +1,6 @@
 import React from 'react';
-import { exportResultsAsPDF } from '../../../lib/exportpdf';
-import '../../../styles/sharecard.css';
+import { exportResultsAsPDF } from '../../lib/exportpdf';
+import '../../styles/sharecard.css';
 
 // Changed 'type' to 'mbtiType' to match the prop name passed from ResultBadge
 // Added 'quizResults' to destructure the user's preferences
