@@ -1,6 +1,6 @@
 'use client'; 
 import React, { Suspense } from 'react';
-import ResultContent from '../../components/quiz/resultbadge';
+import ResultContent from '../../../components/quiz/resultbadge';
 
 const Results = () => {
   return (
