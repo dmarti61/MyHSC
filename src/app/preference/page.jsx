@@ -1,5 +1,5 @@
 'use client'; 
-import React from 'react';
+import React, { Suspense } from 'react';
 import PreferenceContent from '../../components/quiz/preference';
 
 const Preferences = () => {
