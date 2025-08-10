@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from 'react'; 
 import styles from '../../../styles/explore.module.css';
 import { MBTI_MAP } from '../../../components/quiz/mbtimap';
 import { CAREER_STATS } from '../../../components/quiz/careerstats';
