@@ -1,8 +1,8 @@
 'use client'; 
 import React from 'react';
-import Preference from '../../components/quiz/preference';
+import PreferenceContent from '../../components/quiz/preference';
 
-const Preference = () => {
+const Preferences = () => {
   return (
     <main>
       <PreferenceContent />
@@ -10,4 +10,4 @@ const Preference = () => {
   );
 };
 
-export default Preference;
+export default Preferences;
