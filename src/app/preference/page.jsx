@@ -5,7 +5,9 @@ import PreferenceContent from '../../components/quiz/preference';
 const Preferences = () => {
   return (
     <main>
-      <PreferenceContent />
+        <Suspense fallback={<div>Loading preferences...</div>}>
+        <PreferenceContent />
+      </Suspense>
     </main>
   );
 };
