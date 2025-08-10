@@ -1,6 +1,6 @@
 'use client'; 
 import React, { Suspense } from 'react';
-import PreferenceContent from '../../components/quiz/preference.jsx';
+import PreferenceContent from '../../../components/quiz/preference.jsx';
 const Preferences = () => {
   return (
     <main>
