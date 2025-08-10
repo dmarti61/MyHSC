@@ -1,6 +1,6 @@
 'use client'; 
 import React from 'react';
-import QuizContent from '../../../components/quiz/quiz';
+import QuizContent from '../../components/quiz/quiz';
 
 const QuizPage = () => {
   return (
