@@ -106,11 +106,10 @@ const Navbar = () => { // Renamed the component to Navbar
         aria-hidden="true"
       />
       <div className="navbar-header">
-        <Link href="/" className="navbar-logo-link" aria-label="Home">
+        <Link href="/" className="navbar-logo" aria-label="Home">
           <Image 
             src="/logo.png" 
             alt="My HS Counselor Logo" 
-            className="navbar-logo"
             fill style= {{ objectFit: "contain"}}
             priority={true} // Use priority instead of loading="eager" for LCP
           />
