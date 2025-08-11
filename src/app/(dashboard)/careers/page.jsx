@@ -38,7 +38,7 @@ const Careers = () => {
           <li>**Pathways:** Become a journeyman, specialize in a niche, earn certifications, or even start your own business.</li>
         </ul>
         <p className="cta-link">
-          <Link href="/trade">
+          <Link href="@/trade">
             Discover more about Trade School here!
           </Link>
         </p>
