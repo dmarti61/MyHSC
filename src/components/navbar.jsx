@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'; // Import the Next.js Image component
 import { usePathname } from 'next/navigation';
-import '../styles/navbar.css';
+import '@/styles/navbar.css';
 
 const navItems = [
   { label: 'My Results', path: '/results', id: 'my-results' },
