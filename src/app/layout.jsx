@@ -1,10 +1,9 @@
 import React from 'react';
 import Script from 'next/script';
-import { Metadata } from 'next';
-import '@/styles/global.css'; // Your existing global styles import
-import Footer from '@/components/footer'; // Your existing Footer component import
+import '@/styles/global.css';
+import Footer from '@/components/footer';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'My HS Counselor',
   description: 'My HS Counselor offers personalized career guidance, life skills, and confidence-building for high school students exploring life after high school.',
   icons: {
