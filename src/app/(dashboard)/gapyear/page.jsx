@@ -3,7 +3,7 @@ import '@/styles/collegeguide.css'; // Use the guide-specific CSS for a cohesive
 
 const GapYear = () => (
   <div className="college-guide-container">
-    <h1 tabIndex="0">🗺️ Gap Year & Alternative Paths: Your Time, Your Way</h1>
+    <h2 tabIndex="0">🗺️ Gap Year & Alternative Paths: Your Time, Your Way</h2>
     <p className="intro">
       Thinking about what comes after high school? For some, it's straight to college, trade school, or a job. But for others, the idea of taking a "gap year" – a purposeful break before diving into the next big thing – can be really appealing. This isn't just a year off; it's a "year on," filled with new experiences and learning. Let's explore if it's the right path for you.
     </p>
