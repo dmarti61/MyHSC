@@ -28,8 +28,9 @@
 }
 
 .navbar-logo {
-  height: auto;
-  width: auto;
+  height: 60px;
+  position: relative;
+  width: 140px;
   user-select: none;
 }
 
