@@ -7,8 +7,6 @@ const MilitaryAcademiesGuide = () => (
     <p>If you're drawn to a highly structured environment, rigorous academics, physical challenge, and a commitment to serving your country as a commissioned officer, then a U.S. Military Academy or an ROTC program could be a compelling option. This path is demanding, but it offers significant opportunities for personal growth, leadership development, and a defined career upon graduation.</p>
     <p className="emphasis"><strong>Crucial Consideration:</strong> This decision should ultimately align with what **YOU** genuinely want, not solely what others (like family) might suggest. Your personal commitment is essential for success in these programs!</p>
 
-    ---
-
     <section className="what-academies-are-section">
       <h3>What Military Academies Are</h3>
       <p>U.S. Military Service Academies are highly selective, tuition-free federal institutions that prepare future officers for the United States Armed Forces. They provide a unique blend of world-class academics, rigorous physical training, and intensive leadership development, all within a structured military environment. Unlike traditional colleges, every graduate earns a Bachelor of Science degree and is commissioned as an officer in their respective service branch, committing to a period of active duty after graduation.</p>
@@ -41,8 +39,6 @@ const MilitaryAcademiesGuide = () => (
       </div>
     </section>
 
-    ---
-
     <section className="application-process-section">
       <h3>The Application Process</h3>
       <p>Applying to a military academy is significantly more involved than a typical college application. It’s a multi-step process that thoroughly assesses your academic, physical, and leadership potential.</p>
@@ -55,8 +51,6 @@ const MilitaryAcademiesGuide = () => (
         <li><strong>Rigorous Academic Review:</strong> Your high school transcript, standardized test scores (SAT/ACT), and extracurricular activities are all heavily scrutinized as part of the evaluation.</li>
       </ul>
     </section>
-
-    ---
 
     <section className="key-requirements-section">
       <h3>Key Requirements</h3>
@@ -71,7 +65,6 @@ const MilitaryAcademiesGuide = () => (
       </ul>
     </section>
 
-    ---
 
     <section className="life-at-academy-section">
       <h3>Life at an Academy</h3>
@@ -84,8 +77,6 @@ const MilitaryAcademiesGuide = () => (
       </ul>
     </section>
 
-    ---
-
     <section className="post-graduation-section">
       <h3>Post-Graduation</h3>
       <p>Upon successfully completing your four years at a military academy, you'll receive your Bachelor of Science degree and a commission as an officer in your respective branch of the U.S. Armed Forces.</p>
@@ -96,8 +87,7 @@ const MilitaryAcademiesGuide = () => (
       </ul>
     </section>
 
-    ---
-
+<hr />
     <section className="rotc-distinction-section">
       <h3>ROTC (Reserve Officer Training Corps): Another Route to Officer Commission</h3>
       <p>If you're not selected for an academy or prefer a more traditional college experience, **ROTC** is another excellent path to becoming a commissioned officer after college.</p>
@@ -128,7 +118,6 @@ const MilitaryAcademiesGuide = () => (
       </ul>
     </section>
 
-    ---
 
     <section className="academies-vs-rotc-section">
       <h3>Academies vs. ROTC: Key Differences</h3>
@@ -139,7 +128,6 @@ const MilitaryAcademiesGuide = () => (
       </ul>
     </section>
 
-    ---
 
     <section className="resources-section">
       <h3>Resources</h3>
