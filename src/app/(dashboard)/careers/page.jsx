@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import '../../../styles/collegeguide.css'; // <-- Import the guide-specific CSS
+import '@/styles/collegeguide.css'; // <-- Import the guide-specific CSS
 
 const Careers = () => {
   return (
