@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import '../../../styles/collegeguide.css'; // Imports the base guide styles
-import '../../../styles/notsure.css';      // Imports the specific layout styles
+import '@/styles/collegeguide.css'; // Imports the base guide styles
+import '@/styles/notsure.css';      // Imports the specific layout styles
 
 const NotSure = () => {
   return (
