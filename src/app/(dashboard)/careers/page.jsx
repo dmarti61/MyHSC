@@ -6,7 +6,7 @@ import '@/styles/collegeguide.css'; // <-- Import the guide-specific CSS
 const Careers = () => {
   return (
     <div className="college-guide-container">
-      <h1>Your Future Starts Now: High School Grads, No College Degree Needed!</h1>
+      <h2>Your Future Starts Now: High School Grads, No College Degree Needed!</h2>
       <p className="intro">
         Congratulations, high school graduates! You've reached a major milestone, and now, an exciting world of career possibilities awaits you – even without a four-year college degree. Many rewarding paths offer direct entry, on-the-job training, and excellent growth potential. All it takes is a clear plan, a willingness to learn, and the determination to build a successful future.
       </p>
