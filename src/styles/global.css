@@ -52,6 +52,9 @@ body {
   padding: 2rem 0; /* More vertical padding for content sections */
   margin: 0 auto;
 }
+.home, .talk-templates, .page-container, .contact-page  {
+   padding: 0 1rem; /* Adjust padding for better spacing */
+}
 
 hr {
   border: none;
