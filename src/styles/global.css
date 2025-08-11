@@ -41,8 +41,7 @@ body {
   color: var(--medium-gray);
   font-family: var(--font-body);
   line-height: 1.7; /* Increased for better readability */
-  padding: 0 1rem; /* Adjust padding for better spacing */
-}
+  }
 
 .nav-padding {
   padding-top: 100px; /* This seems appropriate for the navbar height */
