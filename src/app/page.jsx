@@ -28,7 +28,7 @@ const Home = () => {
 
   const handleStartQuiz = () => router.push('/quiz');
   const handleViewResults = () => router.push('/results');
-  const handleExploreCareers = () => router.push('/explore-careers');
+  const handleExploreCareers = () => router.push('/explore');
 
   return (
     <main className="home" role="main">
