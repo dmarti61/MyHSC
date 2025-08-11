@@ -114,7 +114,7 @@ const Navbar = () => { // Renamed the component to Navbar
             priority={true} // Use priority instead of loading="eager" for LCP
           />
         </Link>
-
+<div className="navbar-logo-link">
         <button
           ref={hamburgerRef}
           className="hamburger"
@@ -128,7 +128,7 @@ const Navbar = () => { // Renamed the component to Navbar
           <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
         </button>
       </div>
-
+</div>
       <div
         id="primary-navigation"
         className={`nav-links ${isMenuOpen ? 'show' : ''}`}
