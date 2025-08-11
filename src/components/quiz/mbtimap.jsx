@@ -96,7 +96,7 @@ export const generateNextStepLink = (mbtiTypeData, preferredPathway) => {
   if (pathways.has("trade")) return "/tradeschoolguide";
   if (pathways.has("job")) return "/careers";
 
-  return "/education-paths"; // A general fallback link
+  return "/explore"; // A general fallback link
 };
 
 export const MBTI_MAP = {
