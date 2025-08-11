@@ -1,8 +1,8 @@
 import jsPDF from 'jspdf';
 import { CAREER_STATS } from '@/components/quiz/careerstats';
 import { MBTI_MAP, generateNextStepPhrase } from '@/components/quiz/mbtimap';
-import { GUIDES_TEXT_CONTENT } from '@/guidestext';
-import { interFont } from '@/inter.js';
+import { GUIDES_TEXT_CONTENT } from '@/lib/guidestext';
+import { interFont } from '@/lib/inter.js';
 
 export const exportResultsAsPDF = ({ type, preference }) => {
   const doc = new jsPDF('p', 'mm', 'a4');
