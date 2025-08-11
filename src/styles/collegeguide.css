@@ -260,4 +260,23 @@ a:hover {
     padding: 2rem 1.5rem;
     margin: 2rem 1rem;
   }
+  /* ... other styles in collegeguide.css ... */
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .college-guide-container {
+    padding: 2rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  /* Add this new rule to make the h2 responsive on mobile */
+  .college-guide-container h2 {
+    font-size: 1.8rem; /* A more appropriate font size for mobile */
+    /* Optional: Add word-break to prevent long words from overflowing */
+    word-break: break-word;
+    /* Optional: reduce the bottom margin */
+    margin-bottom: 1.5rem;
+  }
+}
+
 }
