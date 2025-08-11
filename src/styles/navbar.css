@@ -28,7 +28,8 @@
 }
 
 .navbar-logo {
-  height: 40px;
+  height: auto;
+  max-height: 40px;
   width: auto;
   user-select: none;
 }
@@ -409,9 +410,9 @@ li.active-parent > .nav-top-level-item {
   background: #8c9bb7;
 }
 
-/* Menu open state */
+/* Menu open state 
 html.menu-open,
 body.menu-open {
   overflow: hidden;
   height: 100%;
-}
+}*/
