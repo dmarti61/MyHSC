@@ -43,10 +43,13 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch("/contact", {
-        method: "POST",
-        body: encode(formData),
-      });
+    const response = await fetch("/api/contact", { // <-- Corrected URL
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json', // <-- Add this header
+      },
+      body: JSON.stringify(formData), // <-- Stringify the form data
+    });
 
       if (response.ok) {
         setSubmissionStatus('success');
