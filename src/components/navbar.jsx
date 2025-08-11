@@ -111,8 +111,8 @@ const Navbar = () => { // Renamed the component to Navbar
             src="/logo.png" 
             alt="My HS Counselor Logo" 
             className="navbar-logo"
-            width={240}
-            height={80}
+            width={180}
+            height={60}
             priority={true} // Use priority instead of loading="eager" for LCP
           />
         </Link>
