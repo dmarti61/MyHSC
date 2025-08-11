@@ -3,8 +3,8 @@
 import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation'; // Import the Next.js router
 import questions from '@/lib/questions'; // Updated import path
-import QuestionCard from '@/components/questioncard';
-import ProgressBar from '@/components/progressbar';
+import QuestionCard from '@/components/quiz/questioncard';
+import ProgressBar from '@/components/quiz/progressbar';
 
 const mbtiDimensions = ['EI', 'SN', 'TF', 'JP'];
 
