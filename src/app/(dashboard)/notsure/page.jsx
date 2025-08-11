@@ -75,7 +75,7 @@ const NotSure = () => {
           </p>
           <div className="pathway-links">
             <div className="pathway-item">
-              <Link href="/college-guide" className="pathway-link">
+              <Link href="/collegeguide" className="pathway-link">
                 <strong>College:</strong> What's a typical 4-year degree timeline?
               </Link>
             </div>
