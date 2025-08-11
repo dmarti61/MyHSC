@@ -304,7 +304,7 @@ li.active-parent > .nav-top-level-item {
     pointer-events: auto;
     transform: none;
     flex-grow: 1;
-    justify-content: flex-end;
+    justify-content: space-evenly;
   }
 
   .nav-links-scroll-wrapper {
