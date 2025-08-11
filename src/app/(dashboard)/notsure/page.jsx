@@ -60,7 +60,7 @@ const NotSure = () => {
           <p className="exploration-step-text">
             Think of this as window shopping for your future. Click on a few careers that sound even mildly interesting. You don't have to choose anything right now—just see what's out there.
           </p>
-          <Link href="/explore-careers" className="cta-button">
+          <Link href="/explore" className="cta-button">
             Start Exploring Careers
           </Link>
         </div>
@@ -80,12 +80,12 @@ const NotSure = () => {
               </Link>
             </div>
             <div className="pathway-item">
-              <Link href="/trade" className="pathway-link">
+              <Link href="/tradeschoolguide" className="pathway-link">
                 <strong>Skilled Trades:</strong> How long are trade programs?
               </Link>
             </div>
             <div className="pathway-item">
-              <Link href="/direct-entry-careers" className="pathway-link">
+              <Link href="/careers" className="pathway-link">
                 <strong>Direct Entry:</strong> What jobs can you get right after high school?
               </Link>
             </div>
@@ -95,7 +95,7 @@ const NotSure = () => {
               </Link>
             </div>
             <div className="pathway-item">
-              <Link href="/gap-year" className="pathway-link">
+              <Link href="/gapyear" className="pathway-link">
                 <strong>Gap Year:</strong> What's it like to take a year off?
               </Link>
             </div>
@@ -110,7 +110,7 @@ const NotSure = () => {
           <p className="exploration-step-text">
             Money can be a big source of stress, but there are tons of options to help you pay for your next step, no matter what it is. Learn about scholarships, grants, and other financial aid resources.
           </p>
-          <Link href="/financial-aid" className="cta-button">
+          <Link href="/financialaid" className="cta-button">
             Learn About Funding
           </Link>
         </div>
