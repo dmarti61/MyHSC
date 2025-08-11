@@ -5,9 +5,9 @@ import { useRouter, useSearchParams } from 'next/navigation';
 // Ensure correct paths to your data files (MBTI_MAP and CAREER_STATS)
 // Import the new functions from mbtimap
 import { MBTI_MAP, generateNextStepPhrase, getPathwayDisplay, generateNextStepLink } from './mbtimap'; 
-import { CAREER_STATS } from '@/careerstats';
-import { BLS_MAP } from '@/blsmap';
-import Share_Card from '@/sharecard';
+import { CAREER_STATS } from '@/components/quiz/careerstats';
+import { BLS_MAP } from '@/components/quiz/blsmap';
+import Share_Card from '@/components/quiz/sharecard';
 import '@/styles/resultbadge.css';
 
 const ResultBadge = () => {
