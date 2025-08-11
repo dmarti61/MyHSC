@@ -6,20 +6,6 @@
    and reassuring, reflecting the brand's mission of providing clarity and guidance.
 */
 
-/* ─────────── CSS Variables for Cohesive Branding ─────────── */
-/* Using variables makes it easy to change the color scheme later. */
-:root {
-  --primary-blue: #2980b9; /* The core, professional blue */
-  --secondary-blue: #3498db; /* A slightly more vibrant blue for accents */
-  --dark-blue-gray: #2c3e50; /* A deep, professional blue-gray for headings */
-  --light-gray: #f4f7f9; /* A clean, light background color */
-  --medium-gray: #616e87; /* For body text and secondary information */
-  --border-color: #e0e6f0; /* A soft border color */
-  --success-green: #27ae60; /* A confident green for success/highlighted items */
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
-}
-
 /* ─────────── Font & Reset ─────────── */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -33,6 +19,21 @@ html, body {
   height: 100%;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+}
+
+
+/* ─────────── CSS Variables for Cohesive Branding ─────────── */
+/* Using variables makes it easy to change the color scheme later. */
+:root {
+  --primary-blue: #2980b9; /* The core, professional blue */
+  --secondary-blue: #3498db; /* A slightly more vibrant blue for accents */
+  --dark-blue-gray: #2c3e50; /* A deep, professional blue-gray for headings */
+  --light-gray: #f4f7f9; /* A clean, light background color */
+  --medium-gray: #616e87; /* For body text and secondary information */
+  --border-color: #e0e6f0; /* A soft border color */
+  --success-green: #27ae60; /* A confident green for success/highlighted items */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 body {
