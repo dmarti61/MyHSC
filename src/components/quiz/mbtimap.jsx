@@ -84,17 +84,17 @@ export const generateNextStepLink = (mbtiTypeData, preferredPathway) => {
 
   // Prioritize the user's preferred pathway for the link, if it's a valid path
   if (pathways.has(preferredPathway)) {
-      if (preferredPathway === "college") return "/college-guide";
-      if (preferredPathway === "community") return "/two-year";
-      if (preferredPathway === "trade") return "/trade-school-guide";
-      if (preferredPathway === "job") return "/direct-entry-careers";
+      if (preferredPathway === "college") return "/collegeguide";
+      if (preferredPathway === "community") return "/twoyear";
+      if (preferredPathway === "trade") return "/tradeschoolguide";
+      if (preferredPathway === "job") return "/careers";
   }
 
   // Fallback to the most common/highest-level pathway if the preferred path is not found
-  if (pathways.has("college")) return "/college-guide";
-  if (pathways.has("community")) return "/two-year";
-  if (pathways.has("trade")) return "/trade-school-guide";
-  if (pathways.has("job")) return "/direct-entry-careers";
+  if (pathways.has("college")) return "/collegeguide";
+  if (pathways.has("community")) return "/twoyear";
+  if (pathways.has("trade")) return "/tradeschoolguide";
+  if (pathways.has("job")) return "/careers";
 
   return "/education-paths"; // A general fallback link
 };
