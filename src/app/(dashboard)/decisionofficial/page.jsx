@@ -1,7 +1,7 @@
 // src/pages/DecisionOfficialGuide.js
 import React from 'react';
 // Changed to import the dedicated guide stylesheet for consistent styling.
-import '../../../styles/collegeguide.css';
+import '@/styles/collegeguide.css';
 
 const DecisionOfficialGuide = () => (
   <div className="college-guide-container">
