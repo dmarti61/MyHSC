@@ -1,5 +1,31 @@
 import React from 'react';
+import Link from 'next/link';
 import '@/styles/collegeguide.css';
+
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'Trade School & Apprenticeship Guide: Your Path to a Skilled Trade Career | MyHSCounselor.com',
+  description: 'A comprehensive guide to skilled trade careers after high school. Learn about trade schools, apprenticeships, on-the-job training, and high-demand jobs that don’t require a 4-year degree.',
+  openGraph: {
+    title: 'Trade School & Apprenticeship: A Complete Guide',
+    description: 'Explore the different pathways to a successful career in the skilled trades. Our guide covers fast-track certifications, earn-while-you-learn apprenticeships, and essential resources.',
+    url: 'https://myhscounselor.com/tradeschoolguide',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-tradeschool.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A graphic showing various tools like a wrench and helmet, symbolizing skilled trades.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/tradeschoolguide',
+  },
+};
 
 const TradeSchoolGuide = () => (
   <div className="college-guide-container">
