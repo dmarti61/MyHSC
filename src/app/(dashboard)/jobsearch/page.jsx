@@ -1,5 +1,30 @@
 import React from 'react';
+import Link from 'next/link';
 
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'Job Search Guide for High School Graduates | MyHSCounselor.com',
+  description: 'Your complete guide to finding a job after high school. Learn how to write a resume with no experience, ace your first interview, and find job opportunities in your area.',
+  openGraph: {
+    title: 'Job Search Essentials for High School Graduates',
+    description: 'Get practical tips for crafting your first resume, preparing for interviews, and finding entry-level jobs right out of high school.',
+    url: 'https://myhscounselor.com/jobsearch',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-job-search.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A graphic showing a resume and a graduation cap on a desk.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/jobsearch',
+  },
+};
 
 const JobSearch = () => (
   <div className="page-container">
