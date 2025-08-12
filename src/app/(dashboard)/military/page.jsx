@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Your Guide to U.S. Military Academies & ROTC',
     description: 'Learn about the rigorous academic, physical, and leadership requirements for military academies and ROTC programs. Understand the key differences to find the right path for you.',
-    url: 'https://myhscounselor.com/military-academies',
+    url: 'https://myhscounselor.com/military',
     siteName: 'MyHSCounselor.com',
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://myhscounselor.com/military-academies',
+    canonical: 'https://myhscounselor.com/military',
   },
 };
 
