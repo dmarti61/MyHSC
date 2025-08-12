@@ -1,12 +1,35 @@
-// src/pages/DecisionOfficialGuide.js
 import React from 'react';
-// Changed to import the dedicated guide stylesheet for consistent styling.
+import Link from 'next/link';
 import '@/styles/collegeguide.css';
+
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'Making Your College Decision Official: A Step-by-Step Guide | MyHSCounselor.com',
+  description: 'Accepted to college? Learn the next steps to make your decision official. This guide covers how to compare offers, pay your deposit, and prepare for your first semester.',
+  openGraph: {
+    title: 'Your Official Post-Graduation Guide: Making Your Decision Official',
+    description: 'Learn the key steps to officially accept your college, trade school, or job offer after high school and prepare for your future.',
+    url: 'https://myhscounselor.com/decision-official',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-decision-official.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A high school student reviewing a list of college acceptance letters and a checklist of next steps.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/decision-official',
+  },
+};
 
 const DecisionOfficialGuide = () => (
   <div className="college-guide-container">
-    {/* Removed tabIndex="0" from the h1 as it's not needed for a heading */}
-    <h1>✅ Making Your Decision Official: Your Next Steps After Graduation</h1>
+    <h1>✅ Making Your Decision Official: Your Next Steps After High School</h1>
     <p>
       Congratulations! You’ve explored your options, received offers, and are now ready to commit to your next big step after high school. This stage is exciting, but it also comes with important deadlines and details. Let’s make sure you nail the next steps, no matter which path you’ve chosen.
     </p>
