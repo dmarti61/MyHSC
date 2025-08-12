@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import '@/styles/financialaid.css'; // Assuming you have a dedicated stylesheet
 
 // This is the metadata object for SEO.
 export const metadata = {
