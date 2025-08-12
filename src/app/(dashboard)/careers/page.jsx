@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Careers for High School Graduates: No College Degree Needed | My HS Counselor',
   
   // Meta description that appears in Google search results. Make it enticing!
-  description: 'Explore rewarding careers for high school graduates that don't require a four-year degree. Find guides on skilled trades, logistics, healthcare support, and more, with clear pathways to success.',
+  description: 'Explore rewarding careers for high school graduates that don\'t require a four-year degree. Find guides on skilled trades, logistics, healthcare support, and more, with clear pathways to success.',
   
   // Open Graph (OG) tags for social media.
   openGraph: {
