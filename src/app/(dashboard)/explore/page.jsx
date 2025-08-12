@@ -1,16 +1,41 @@
-import React, { useMemo } from 'react'; 
-import styles from '@/styles/explore.module.css';
+import React from 'react';
+import Link from 'next/link';
+import '@/styles/explore.module.css';
 import { MBTI_MAP } from '@/components/quiz/mbtimap';
 import { CAREER_STATS } from '@/components/quiz/careerstats';
 import { BLS_MAP } from '@/components/quiz/blsmap';
 
+// SEO Metadata for the Explore Careers page
+export const metadata = {
+  title: 'Explore Careers by Educational Path: High School Graduates | MyHSCounselor.com',
+  description: 'Explore careers based on educational paths like college, trade school, or direct entry jobs. Discover career pathways, median salaries, and job outlook for each field.',
+  openGraph: {
+    title: 'Explore Careers by Education',
+    description: 'Find your career path. Browse a curated list of careers grouped by the required educational path, from college degrees to trade school certifications and direct entry jobs.',
+    url: 'https://myhscounselor.com/explore',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-explore.jpg', // Create a specific image for this page
+        width: 1200,
+        height: 630,
+        alt: 'A graphic showing different career paths and educational levels.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/explore',
+  },
+};
+
+// Data processing logic moved to the server component
 const getUniqueCareers = () => {
   const allCareers = new Map();
   Object.values(MBTI_MAP).forEach(({ careers }) => {
     careers.forEach(career => {
-      // Use the career title as a unique key
       if (!allCareers.has(career.title)) {
-        // Look up the career stats and merge them with the career object
         const careerWithStats = {
           ...career,
           ...CAREER_STATS[career.title],
@@ -24,7 +49,6 @@ const getUniqueCareers = () => {
 
 const groupCareersByEducation = (careers) => {
   const grouped = careers.reduce((acc, career) => {
-    // Check for `postSchoolPath` as the education level
     const educationLevel = career.postSchoolPath || 'Other';
     if (!acc[educationLevel]) {
       acc[educationLevel] = [];
@@ -33,13 +57,13 @@ const groupCareersByEducation = (careers) => {
     return acc;
   }, {});
 
-  // Sort the keys (education levels) for consistent display order
   const customOrder = ["college", "community", "trade", "job", "other"];
   const sortedKeys = Object.keys(grouped).sort((a, b) => {
-    return customOrder.indexOf(a.toLowerCase()) - customOrder.indexOf(b.toLowerCase());
+    const aIndex = customOrder.indexOf(a.toLowerCase());
+    const bIndex = customOrder.indexOf(b.toLowerCase());
+    return aIndex - bIndex;
   });
 
-  // Create a new object with sorted keys
   const sortedGrouped = {};
   sortedKeys.forEach(key => {
     const displayKey = key.charAt(0).toUpperCase() + key.slice(1);
@@ -49,7 +73,6 @@ const groupCareersByEducation = (careers) => {
   return sortedGrouped;
 };
 
-// UPDATED CareerCard to display all relevant stats
 const CareerCard = ({ title, pathway, description, soc_code, salary, outlook, education, skills }) => (
   <div className={styles.card}>
     <h4>{title}</h4>
@@ -72,8 +95,9 @@ const CareerCard = ({ title, pathway, description, soc_code, salary, outlook, ed
 );
 
 const ExploreCareers = () => {
-  const uniqueCareers = useMemo(() => getUniqueCareers(), []);
-  const groupedCareers = useMemo(() => groupCareersByEducation(uniqueCareers), [uniqueCareers]);
+  // Data is processed directly here, in the Server Component.
+  const uniqueCareers = getUniqueCareers();
+  const groupedCareers = groupCareersByEducation(uniqueCareers);
 
   return (
     <div className={styles.container}>
