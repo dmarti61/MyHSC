@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Your Official Post-Graduation Guide: Making Your Decision Official',
     description: 'Learn the key steps to officially accept your college, trade school, or job offer after high school and prepare for your future.',
-    url: 'https://myhscounselor.com/decision-official',
+    url: 'https://myhscounselor.com/decisionofficial',
     siteName: 'MyHSCounselor.com',
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://myhscounselor.com/decision-official',
+    canonical: 'https://myhscounselor.com/decisionofficial',
   },
 };
 
