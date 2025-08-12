@@ -1,8 +1,32 @@
-'use client';
-
+import React from 'react';
 import Link from 'next/link';
 import '@/styles/collegeguide.css'; // Imports the base guide styles
 import '@/styles/notsure.css';      // Imports the specific layout styles
+
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'Not Sure What To Do After High School? A Guide to Your Options | MyHSCounselor.com',
+  description: 'Feeling unsure after high school graduation? This guide provides a no-pressure plan to explore your options, from career paths to financial aid, and find clarity.',
+  openGraph: {
+    title: 'Not Sure What’s Next? A Guide for High School Graduates',
+    description: 'It’s okay not to have it all figured out. Find calm and explore your options for college, trades, jobs, or a gap year with this helpful, stress-free guide.',
+    url: 'https://myhscounselor.com/notsure',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-notsure.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A thoughtful student looking at a crossroads with different paths ahead.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/notsure',
+  },
+};
 
 const NotSure = () => {
   return (
