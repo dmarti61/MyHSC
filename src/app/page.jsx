@@ -1,11 +1,6 @@
 // This is a Server Component by default, which is great for SEO.
 import React from 'react';
-import dynamic from 'next/dynamic';
-
-// We import the client-side part of the page using next/dynamic.
-// The "ssr: false" option prevents this part from being rendered on the server,
-// which is exactly what we want for components that rely on browser APIs like localStorage.
-const HomeComponent = dynamic(() => import('./homeclient'), { ssr: false });
+import HomeDynamic from './homedynamic';
 
 // This is the metadata object. Next.js automatically turns this into <head> tags.
 // This is the core of your on-page SEO.
@@ -62,7 +57,7 @@ export default function HomePage() {
 
       {/* The client component with the interactive buttons is rendered here. */}
       {/* Search engines won't see this part on the first pass, but it loads for human visitors. */}
-      <HomeComponent />
+      <HomeDynamic />
     </>
   );
 }
