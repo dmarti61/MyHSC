@@ -1,12 +1,40 @@
-'use client';
-
+import React from 'react';
 import Link from 'next/link';
-import '@/styles/collegeguide.css'; // <-- Import the guide-specific CSS
+import '@/styles/collegeguide.css';
 
+// This is the metadata object. Next.js automatically turns this into <head> tags.
+export const metadata = {
+  // Title tag with primary keywords. This is the most critical on-page element.
+  title: 'Careers for High School Graduates: No College Degree Needed | My HS Counselor',
+  
+  // Meta description that appears in Google search results. Make it enticing!
+  description: 'Explore rewarding careers for high school graduates that don't require a four-year degree. Find guides on skilled trades, logistics, healthcare support, and more, with clear pathways to success.',
+  
+  // Open Graph (OG) tags for social media.
+  openGraph: {
+    title: 'Your Future Starts Now: High School Grads, No College Degree Needed!',
+    description: 'Discover stable, high-demand careers you can start right after high school. This guide provides actionable steps to kickstart your professional journey.',
+    url: 'www.myhscounselor.com/careers', // Replace with your actual URL
+    siteName: 'My HS Counselor',
+    images: [
+      {
+        //* url: 'https://www.myhscounselor.com/.jpg', // Create a specific image for this guide */
+        width: 1200,
+        height: 630,
+        alt: 'A high school graduate confidently looking at a successful career path without college.',
+      },
+    ],
+  },
+};
+
+// This is a Server Component, meaning it's rendered on the server and sent as
+// a complete HTML file to the browser and search engines. I've removed the 'use client'
+// directive since the page is static and doesn't need to run on the browser.
 const Careers = () => {
   return (
     <div className="college-guide-container">
-      <h2>Your Future Starts Now: High School Grads, No College Degree Needed!</h2>
+      {/* The <h2> here is fine, but for SEO, this should be the primary <h1> for the page. */}
+      <h1>Your Future Starts Now: High School Grads, No College Degree Needed!</h1>
       <p className="intro">
         Congratulations, high school graduates! You've reached a major milestone, and now, an exciting world of career possibilities awaits you – even without a four-year college degree. Many rewarding paths offer direct entry, on-the-job training, and excellent growth potential. All it takes is a clear plan, a willingness to learn, and the determination to build a successful future.
       </p>
@@ -14,7 +42,9 @@ const Careers = () => {
         This page is your guide to exploring diverse fields where your diploma is your ticket to getting started. We'll show you how to find opportunities, gain essential skills, and kickstart a fulfilling career right out of the gate.
       </p>
       <hr />
+      
       <div className="career-section">
+        {/* Each of these headings is a great keyword-rich subheading, which helps with SEO. */}
         <h2>🛠️ Skilled Trades & Apprenticeships: Build Your Future with Your Hands</h2>
         <p>
           If you enjoy hands-on work, problem-solving, and seeing tangible results, the **skilled trades** offer incredible stability, high demand, and excellent earning potential. Many roles begin with an **apprenticehip**, a "learn-while-you-earn" model where you get paid to train directly on the job, often alongside experienced professionals. This means little to no student debt!
@@ -34,10 +64,11 @@ const Careers = () => {
             </ul>
           </li>
           <li>**Key Skills:** Reliability, physical stamina, mechanical aptitude, strong problem-solving, attention to detail, safety consciousness.</li>
-          <li>**Training:** Hands-on experience, often alongside certified professionals; formal apprenticeships typically last 2-5 years and include classroom instruction. Look for programs through local unions, trade organizations, or the Department of Labor's <a href="[https://www.apprenticeship.gov/](https://www.apprenticeship.gov/)" target="_blank" rel="noopener noreferrer">Apprenticeship.gov</a>.</li>
+          <li>**Training:** Hands-on experience, often alongside certified professionals; formal apprenticeships typically last 2-5 years and include classroom instruction. Look for programs through local unions, trade organizations, or the Department of Labor's <a href="https://www.apprenticeship.gov/" target="_blank" rel="noopener noreferrer">Apprenticeship.gov</a>.</li>
           <li>**Pathways:** Become a journeyman, specialize in a niche, earn certifications, or even start your own business.</li>
         </ul>
         <p className="cta-link">
+          {/* This internal link helps build your site's structure */}
           <Link href="/tradeschoolguide">
             Discover more about Trade School here!
           </Link>
@@ -239,7 +270,7 @@ const Careers = () => {
           <li>**Utilize Resources:**
             <ul>
               <li>**Your High School Counselor:** They can offer guidance, connect you with local programs, and help with resume building.</li>
-              <li>**American Job Centers / One-Stop Career Centers:** These government-funded centers offer free career counseling, job search assistance, resume workshops, and training resources. Find one near you at <a href="[https://www.careeronestop.org/](https://www.careeronestop.org/)" target="_blank" rel="noopener noreferrer">CareerOneStop.org</a>.</li>
+              <li>**American Job Centers / One-Stop Career Centers:** These government-funded centers offer free career counseling, job search assistance, resume workshops, and training resources. Find one near you at <a href="https://www.careeronestop.org/" target="_blank" rel="noopener noreferrer">CareerOneStop.org</a>.</li>
               <li>**Online Job Boards:** Indeed, LinkedIn, ZipRecruiter, Glassdoor are great for finding entry-level positions.</li>
               <li>**Company Websites:** Many companies post openings directly on their own "Careers" pages.</li>
               <li>**Local Businesses:** Don't underestimate walking into local shops, restaurants, or businesses and asking about job opportunities.</li>
