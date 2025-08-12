@@ -1,5 +1,31 @@
 import React from 'react';
+import Link from 'next/link';
 import '@/styles/collegeguide.css'; // Use the guide-specific CSS for a cohesive look
+
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'Gap Year Guide: Planning Your Purposeful Break After High School | MyHSCounselor.com',
+  description: 'Thinking about a gap year? Our guide helps you plan a meaningful break before college or a career, with ideas for travel, work, volunteering, and skill development.',
+  openGraph: {
+    title: 'Gap Year: Planning a Purposeful Break After High School',
+    description: 'Explore the benefits and popular activities for a gap year. This guide helps you decide if a gap year is right for you and how to make the most of it with a solid plan.',
+    url: 'https://myhscounselor.com/gapyear',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-gap-year.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A compass on a map, symbolizing the exploration and purpose of a gap year.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/gapyear',
+  },
+};
 
 const GapYear = () => (
   <div className="college-guide-container">
