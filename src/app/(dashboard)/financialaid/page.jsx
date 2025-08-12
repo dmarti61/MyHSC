@@ -1,4 +1,31 @@
 import React from 'react';
+import Link from 'next/link';
+import '@/styles/financialaid.css'; // Assuming you have a dedicated stylesheet
+
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'Financial Aid Guide: FAFSA, Grants, & Scholarships | MyHSCounselor.com',
+  description: 'A comprehensive guide to financial aid, including FAFSA, scholarships, grants, and student loans. Learn how to fund your college or trade school education with confidence.',
+  openGraph: {
+    title: 'Your Complete Guide to Financial Aid',
+    description: 'Break down the complex world of financial aid with this easy-to-follow guide covering FAFSA, scholarships, grants, and how to pay for your education.',
+    url: 'https://myhscounselor.com/financial-aid',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-financial-aid.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A student sitting at a desk with a laptop, surrounded by financial documents and a piggy bank.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/financial-aid',
+  },
+};
 
 const FinancialAid = () => (
   <div className="page-container">
