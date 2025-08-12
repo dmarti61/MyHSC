@@ -32,19 +32,6 @@ const Home = () => {
 
   return (
     <main className="home" role="main">
-      <h1 tabIndex="0" aria-label="Welcome to My High School Counselor">🎓 My HS Counselor</h1>
-
-      <p>
-  <strong>Not sure what comes after high school?</strong> You’re not alone—and you don’t have to figure it out by yourself. Whether you're heading to college, thinking about a trade, or just exploring your options, we’ll help you find a path that fits <em>you</em>.
-</p>
-
-<p>
-<strong>Take our 24-question quiz</strong> to uncover your personality type and career preferences. Get matched with real options—so you can move forward with confidence.
-</p>
-
-<p>
-  <strong>Start now. Your future's waiting.</strong>
-</p>
 
       <div className="button-group">
         <button onClick={handleStartQuiz} className="primary-btn">🚀 Start Your Journey</button>
