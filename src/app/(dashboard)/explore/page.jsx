@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import '@/styles/explore.module.css';
+import styles from '@/styles/explore.module.css';
 import { MBTI_MAP } from '@/components/quiz/mbtimap';
 import { CAREER_STATS } from '@/components/quiz/careerstats';
 import { BLS_MAP } from '@/components/quiz/blsmap';
