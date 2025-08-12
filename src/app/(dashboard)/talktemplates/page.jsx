@@ -1,4 +1,30 @@
 import React from 'react';
+import Link from 'next/link';
+
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'How to Ask for a Recommendation: Email Templates & Tips | MyHSCounselor.com',
+  description: 'Learn how to confidently ask for a letter of recommendation or professional reference. Includes easy-to-use email templates for college, trade school, and job applications.',
+  openGraph: {
+    title: 'Recommendation & Reference Request Templates',
+    description: 'Feeling nervous about asking for a reference? Use our simple templates and tips to confidently request recommendations for college, trade school, or your first job.',
+    url: 'https://myhscounselor.com/talk-templates',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-talk-templates.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A graphic with email icons and a thought bubble, symbolizing communication and confidence.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/talk-templates',
+  },
+};
 
 const TalkTemplates = () => {
   return (
