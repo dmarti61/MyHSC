@@ -1,4 +1,4 @@
-mimport React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import '@/styles/collegeguide.css'; // Reusing the same styles for consistency
 
