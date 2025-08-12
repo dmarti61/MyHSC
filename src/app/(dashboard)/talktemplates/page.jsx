@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: 'Recommendation & Reference Request Templates',
     description: 'Feeling nervous about asking for a reference? Use our simple templates and tips to confidently request recommendations for college, trade school, or your first job.',
-    url: 'https://myhscounselor.com/talk-templates',
+    url: 'https://myhscounselor.com/talktemplates',
     siteName: 'MyHSCounselor.com',
     images: [
       {
@@ -22,7 +22,7 @@ export const metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://myhscounselor.com/talk-templates',
+    canonical: 'https://myhscounselor.com/talktemplates',
   },
 };
 
