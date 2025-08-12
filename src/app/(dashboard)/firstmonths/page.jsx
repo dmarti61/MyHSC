@@ -1,5 +1,30 @@
-// src/pages/FirstMonthsGuide.js
 import React from 'react';
+import Link from 'next/link';
+
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'First Months After High School: A Guide to Success | MyHSCounselor.com',
+  description: 'A practical guide for navigating your first few months after high school. Learn how to manage new responsibilities, build a support system, and prioritize your well-being, whether you chose college, trade school, or a job.',
+  openGraph: {
+    title: 'Your Guide to the First Months After Graduation',
+    description: 'Feeling overwhelmed? Our guide helps you successfully navigate the transition into college, a new job, or military service with practical tips on time management, well-being, and building a support system.',
+    url: 'https://myhscounselor.com/first-months',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-first-months.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A college campus scene with students, symbolizing the start of a new journey.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/firstmonths',
+  },
+};
 
 const FirstMonths = () => (
   <div className="page-container">
