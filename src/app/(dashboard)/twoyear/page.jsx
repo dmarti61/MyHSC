@@ -1,6 +1,31 @@
-// src/components/twoyear.js
-import React from 'react';
+mimport React from 'react';
+import Link from 'next/link';
 import '@/styles/collegeguide.css'; // Reusing the same styles for consistency
+
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'Two-Year College Guide: Benefits, Pathways & Transferring | MyHSCounselor.com',
+  description: 'Your complete guide to two-year colleges. Learn how community colleges offer affordable pathways to a bachelor\'s degree, career training, and a flexible start to higher education.',
+  openGraph: {
+    title: 'Your Guide to Two-Year Colleges & Community College',
+    description: 'Explore the benefits of community college, including cost savings, flexible schedules, and diverse programs that lead to careers or a seamless transfer to a four-year university.',
+    url: 'https://myhscounselor.com/two-year',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-two-year.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A college campus setting, symbolizing the start of a journey at a two-year college.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/two-year',
+  },
+};
 
 const TwoYear = () => (
   <div className="college-guide-container">
@@ -137,6 +162,7 @@ const TwoYear = () => (
       <li>**Your State's Higher Education Website:** Search for "[Your State] higher education" to find information on state grants and transfer agreements.</li>
       <li>**Individual College Websites:** Always check the admissions, financial aid, and academic program pages of the specific two-year college you're interested in.</li>
       <li>**Transfer Agreements:** Look for "articulation agreements" or "transfer guides" on both the community college's and your target four-year university's websites.</li>
+      <li>**CareerOneStop:** (<a href="https://www.careeronestop.org" target="_blank" rel="noopener noreferrer">https://www.careeronestop.org</a>) A great resource for exploring careers and finding local training programs, including those at two-year colleges.</li>
     </ul>
 
     <hr />
