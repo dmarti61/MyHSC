@@ -31,9 +31,7 @@ const Home = () => {
   const handleExploreCareers = () => router.push('/explore');
 
   return (
-    <main className="home" role="main">
-
-      <div className="button-group">
+     <div className="button-group">
         <button onClick={handleStartQuiz} className="primary-btn">🚀 Start Your Journey</button>
 
         {hasResult && (
@@ -42,7 +40,6 @@ const Home = () => {
 
         <button onClick={handleExploreCareers} className="secondary-btn">Explore Careers</button>
       </div>
-    </main>
   );
 };
 
