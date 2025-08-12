@@ -1,28 +1,64 @@
-// src/components/CollegeGuide.js
 import React from 'react';
-import '@/styles/collegeguide.css'; // Assuming this path is correct for your styles
+import Link from 'next/link';
+import '@/styles/collegeguide.css';
 
+// This is the metadata object. Next.js automatically turns this into <head> tags.
+export const metadata = {
+  // Title tag with primary keywords. This is the most critical on-page element.
+  title: 'College Application Roadmap: A Step-by-Step Guide for High School Students | MyHSCounselor.com',
+  
+  // Meta description that appears in Google search results. Make it enticing!
+  description: 'Your complete guide to the college application process, from junior year to your final decision. Learn how to research schools, secure financial aid, write compelling essays, and get a head start on your future.',
+  
+  // Open Graph (OG) tags for social media sharing.
+  openGraph: {
+    title: 'The Ultimate College Application Roadmap for High School Students',
+    description: 'A practical, step-by-step guide to applying for college. This roadmap covers everything from standardized tests to financial aid and essay writing.',
+    url: 'https://myhscounselor.com/collegeguide',
+    siteName: 'My HS Counselor',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-collegeguide.jpg', // Replace with a specific, high-quality image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A high school student working on their college application with a clear roadmap.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  
+  // Canonical URL to prevent duplicate content issues.
+  alternates: {
+    canonical: 'https://myhscounselor.com/collegeguide',
+  },
+};
+
+// This page is a Server Component by default, so we've removed the 'use client' directive.
+// This is the best practice for a static, content-heavy page like this one.
 const CollegeGuide = () => (
   <div className="college-guide-container">
-    <h2>🎓 Your College Application Roadmap (U.S.)</h2>
+    {/* Use a single <h1> for the main topic of the page. */}
+    <h1>🎓 Your College Application Roadmap (U.S.)</h1>
 
     <p className="intro">
     Applying to college might feel overwhelming, but with the right approach, it's a journey you can navigate with confidence. This guide is your practical roadmap—offering step-by-step strategies, key resources, and insights for every stage. Take it one step at a time, and know this: your effort today is an investment in your future.
     </p>
 
     <p className="pathway-note">
-    While this guide focuses on securing a <strong>four-year bachelor's degree</strong>, it’s equally important to consider <strong>two-year colleges (community colleges)</strong> as a powerful starting point. These institutions often offer more affordable tuition, flexible schedules, and career-ready training—and many students use this path to transfer smoothly to four-year universities. To explore this option further, visit our <a href="/two-year-college" rel="noopener noreferrer">Two-Year College & Community College Guide</a>.
+    While this guide focuses on securing a <strong>four-year bachelor's degree</strong>, it’s equally important to consider <strong>two-year colleges (community colleges)</strong> as a powerful starting point. These institutions often offer more affordable tuition, flexible schedules, and career-ready training—and many students use this path to transfer smoothly to four-year universities. To explore this option further, visit our <Link href="/two-year-college">Two-Year College & Community College Guide</Link>.
     </p>
 
     <p className="military-interest-note">
-    If you're interested in combining higher education with military service, <strong>U.S. Military Service Academies and ROTC programs</strong> offer unique and rewarding pathways. These options emphasize leadership, service, and scholarship, and require a distinct application process. Learn more through our <a href="/military" rel="noopener noreferrer">Military Academies & ROTC Guide</a>.
+    If you're interested in combining higher education with military service, <strong>U.S. Military Service Academies and ROTC programs</strong> offer unique and rewarding pathways. These options emphasize leadership, service, and scholarship, and require a distinct application process. Learn more through our <Link href="/military">Military Academies & ROTC Guide</Link>.
     </p>
 
     <hr />
 
-    <h3>Junior Year: Building Your Foundation</h3>
+    {/* Use <h2> for major sections and <h4> for sub-sections. */}
+    <h2>Junior Year: Building Your Foundation</h2>
 
-    <h4>Fall (September - December)</h4>
+    <h3>Fall (September - December)</h3>
     <ul>
       <li>**Explore Interests & Career Paths:** Begin researching fields that genuinely excite you. What subjects do you excel in? What problems are you passionate about solving? This initial exploration will guide your college choices effectively.</li>
       <li>**Initial College Research:** Start exploring different types of colleges—large versus small, public versus private, urban versus rural. Look for academic programs that align with your emerging interests.
@@ -39,7 +75,7 @@ const CollegeGuide = () => (
       </li>
     </ul>
 
-    <h4>Spring (January - May)</h4>
+    <h3>Spring (January - May)</h3>
     <ul>
       <li>**First Official SAT or ACT:** Take your first official standardized test. Analyze your scores to identify areas for improvement. Don't let this first attempt define you—it's primarily a learning experience.
         <p className="why-it-matters">**Why it matters:** Many colleges still consider these scores, even if they are "test-optional." Knowing your baseline helps you plan for future attempts and targeted preparation.</p>
@@ -58,7 +94,7 @@ const CollegeGuide = () => (
       </li>
     </ul>
 
-    <h4>Summer (June - August)</h4>
+    <h3>Summer (June - August)</h3>
     <ul>
       <li>**SAT/ACT Retake (Optional):** If you aim to improve your scores, plan for a retake. Many students see score increases on their second or third attempt.
         <p className="why-it-matters">**Why it matters:** Higher scores can broaden your options or qualify you for more scholarship opportunities.</p>
@@ -76,23 +112,23 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h3>Choosing Your Colleges: Location, Cost, and Strategic Fit</h3>
+    <h2>Choosing Your Colleges: Location, Cost, and Strategic Fit</h2>
     <p>This is where your research culminates. Prioritize institutions that truly align with your goals and where you'll be most successful, rather than just focusing on brand recognition.</p>
     <div className="choice-considerations">
-      <h4>Finding Your Fit and Launching Your Career:</h4>
+      <h3>Finding Your Fit and Launching Your Career:</h3>
       <p>When evaluating colleges for your major, also consider how the institution's network and career services align with your post-graduation career aspirations. It's smart to pick a place where you can see yourself thriving for the next 5-6 years after high school, both academically and professionally.</p>
       <p className="advice-box">
         **Mentor Insight:** While many students secure their first job in the region where they graduate, remember that career opportunities are not limited by geography. Focus on schools that offer strong programs in your field and have good connections to industries you're interested in, regardless of location.
       </p>
 
-      <h4>Understanding Tuition & Scholarships:</h4>
+      <h3>Understanding Tuition & Scholarships:</h3>
       <p>Let's be realistic about college costs. **Out-of-state tuition** and **private college tuition** can be significantly higher than in-state public universities. For example, annual out-of-state and private college tuition can be around **$30,000**, compared to an in-state (public) Texas university at approximately **$10,000**.</p>
       <p className="advice-box">
         **Strategic Financial Planning:** Don't let the initial "sticker price" of a college deter you immediately. Many private and out-of-state schools offer generous **financial aid and scholarships** that can make them surprisingly affordable, sometimes even comparable to in-state public options. Always use a college's **"net price calculator"** on their website to get a more accurate idea of what *you* might actually pay after grants and scholarships. Full scholarships are highly competitive but are definitely worth pursuing if you're a strong candidate. Be prepared for the possibility of taking out some loans, but ensure that any debt incurred is a worthwhile investment in your degree.
       </p>
     </div>
 
-    <h4>Your Application List: The "5 Colleges" Strategy</h4>
+    <h3>Your Application List: The "5 Colleges" Strategy</h3>
     <p>Once you've aligned on your major and preferred location, it's time to build your application list. Aim for at least **5 colleges** to apply to:</p>
     <ul>
       <li>**1 Dream College:** Your ideal school—reach for the stars!</li>
@@ -104,9 +140,9 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h3>Senior Year: Application Season</h3>
+    <h2>Senior Year: Application Season</h2>
 
-    <h4>Fall (September - November)</h4>
+    <h3>Fall (September - November)</h3>
     <ul>
       <li>**Set Up Application Accounts:** Create accounts on Common App, Coalition App, or specific university portals. Familiarize yourself with their interfaces.
         <p className="why-it-matters">**Why it matters:** These are the primary platforms for submitting your applications efficiently.</p>
@@ -147,7 +183,7 @@ const CollegeGuide = () => (
       </li>
     </ul>
 
-    <h4>Winter (December - February)</h4>
+    <h3>Winter (December - February)</h3>
     <ul>
       <li>**Submit Regular Decision Applications:** Ensure all your regular decision applications are submitted well before their deadlines. Avoid waiting until the last minute.
         <p className="why-it-matters">**Why it matters:** Missing a deadline means missing an opportunity for consideration.</p>
@@ -165,7 +201,7 @@ const CollegeGuide = () => (
       </li>
     </ul>
 
-    <h4>Spring (March - May)</h4>
+    <h3>Spring (March - May)</h3>
     <ul>
       <li>**Review Offers:** Carefully compare acceptance letters and financial aid packages. Focus on the **"net price"** (the cost after grants/scholarships) rather than just the sticker price.
         <p className="why-it-matters">**Why it matters:** This allows you to make an informed financial decision and compare the true cost of attendance across your options.</p>
@@ -182,7 +218,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h3>Understanding Financial Aid: FAFSA, Loans & Work-Study</h3>
+    <h2>Understanding Financial Aid: FAFSA, Loans & Work-Study</h2>
     <p>This section addresses the crucial topic of financing your education. Understanding financial aid is key to making college accessible and affordable.</p>
     <ul>
       <li>**FAFSA (Free Application for Federal Student Aid):** This is the primary gateway to unlocking federal financial aid, including **grants** (money you don't repay), **work-study** programs, and **federal student loans**.
@@ -208,7 +244,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h3>Thriving in College: Strategies for Success</h3>
+    <h2>Thriving in College: Strategies for Success</h2>
     <p>Once you've been accepted and are ready to go, congratulations! This is a tremendous accomplishment. Now, let's discuss how to make the most of your college experience.</p>
     <ul>
       <li>**Efficient Degree Completion (15-18 Credit Hours):** Aim to complete your degree efficiently. Taking around **15-18 credit hours per semester** (approximately 5-6 classes) is a manageable workload for many students with good time management. This approach helps you stay on track or even graduate early, which can mean less time accumulating loan interest and a quicker start to your desired career.</li>
@@ -218,7 +254,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h3>🛠️ Key Tools & Resources</h3>
+    <h2>🛠️ Key Tools & Resources</h2>
     <ul>
       <li><a href="https://www.commonapp.org" target="_blank" rel="noopener noreferrer">**Common App**</a> — Apply to 1,000+ colleges using one common application.</li>
       <li><a href="https://www.coalitionforcollegeaccess.org" target="_blank" rel="noopener noreferrer">**Coalition App**</a> — Another widely used application platform by many colleges.</li>
@@ -236,7 +272,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h3>✍️ Crafting Compelling Essays: Expert Tips</h3>
+    <h2>✍️ Crafting Compelling Essays: Expert Tips</h2>
     <ul>
       <li>**Start Early:** Procrastination is the enemy of a strong essay. Give yourself weeks, not just days, to develop and refine your thoughts.</li>
       <li>**Be Authentic:** Your unique voice and perspective are what colleges genuinely want to see. Don't try to be someone you're not; let your true self shine through.</li>
@@ -250,7 +286,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h3>💡 Strategic Bonus Tips</h3>
+    <h2>💡 Strategic Bonus Tips</h2>
     <ul>
       <li>**Stay Organized!** Create a detailed spreadsheet with each college, its application type (Common App, direct), all deadlines (application, financial aid, scholarships), and required materials (essay prompts, LoRs, test scores). This organizational tool will be a lifesaver.</li>
       <li>**Prioritize Depth Over Breadth:** It's more impactful to be deeply involved in a few activities (including meaningful volunteering!) than superficially involved in many. Colleges value quality and sustained commitment.</li>
@@ -261,7 +297,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h3>🚫 Common Pitfalls to Avoid</h3>
+    <h2>🚫 Common Pitfalls to Avoid</h2>
     <ul>
       <li>**Missing Deadlines:** This is the most common and critical application error. Always aim to submit your materials a few days early to avoid last-minute issues.</li>
       <li>**Generic Essays:** Do not use the same essay for every college unless the prompt is identical and you've verified it's acceptable. Tailor your essays to each institution.</li>
