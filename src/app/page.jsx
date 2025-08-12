@@ -20,10 +20,10 @@ export const metadata = {
     siteName: 'My HS Counselor',
     images: [
       {
-        url: 'https://www.myhscounselor.com/og-image.jpg', // Create a good quality image for social media
+        url: 'https://www.myhscounselor.com/public/D6C51617-B041-4F51-B3C8-6F1281FC80DD.png', // Create a good quality image for social media
         width: 1200,
         height: 630,
-        alt: 'High school student looking confidently at a roadmap.',
+        alt: 'High school students looking confidently at a roadmap.',
       },
     ],
     locale: 'en_US',
