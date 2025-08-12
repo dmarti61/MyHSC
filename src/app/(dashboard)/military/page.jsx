@@ -1,5 +1,31 @@
 import React from 'react';
+import Link from 'next/link';
 import '@/styles/collegeguide.css';
+
+// This is the metadata object for SEO.
+export const metadata = {
+  title: 'Military Academies & ROTC Guide: Requirements and Application Process | MyHSCounselor.com',
+  description: 'Explore the path to becoming a military officer. Our guide covers U.S. Military Academy requirements, the application process, and a comparison with ROTC programs.',
+  openGraph: {
+    title: 'Your Guide to U.S. Military Academies & ROTC',
+    description: 'Learn about the rigorous academic, physical, and leadership requirements for military academies and ROTC programs. Understand the key differences to find the right path for you.',
+    url: 'https://myhscounselor.com/military-academies',
+    siteName: 'MyHSCounselor.com',
+    images: [
+      {
+        url: 'https://myhscounselor.com/og-image-military-academies.jpg', // Create a specific image for this guide
+        width: 1200,
+        height: 630,
+        alt: 'A visual of military academy cadets in formation, symbolizing discipline and leadership.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://myhscounselor.com/military-academies',
+  },
+};
 
 const MilitaryAcademiesGuide = () => (
   <div className="college-guide-container">
@@ -65,7 +91,6 @@ const MilitaryAcademiesGuide = () => (
       </ul>
     </section>
 
-
     <section className="life-at-academy-section">
       <h3>Life at an Academy</h3>
       <p>Life at a military academy is distinctly different from a typical college experience. It’s highly structured and demanding, designed to develop the whole person: mind, body, and character.</p>
@@ -118,7 +143,6 @@ const MilitaryAcademiesGuide = () => (
       </ul>
     </section>
 
-
     <section className="academies-vs-rotc-section">
       <h3>Academies vs. ROTC: Key Differences</h3>
       <p>While both paths lead to becoming a commissioned officer, they offer very different collegiate and training experiences:</p>
@@ -127,7 +151,6 @@ const MilitaryAcademiesGuide = () => (
         <li><strong>ROTC:</strong> You attend a traditional civilian college as a regular student. Your military training is integrated into your college life as additional courses and activities. You are generally responsible for your college expenses (though scholarships are often available) until you commission after graduation. You are not on active duty until you graduate and are commissioned.</li>
       </ul>
     </section>
-
 
     <section className="resources-section">
       <h3>Resources</h3>
