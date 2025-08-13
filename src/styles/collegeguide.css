@@ -58,7 +58,7 @@
 }
 
 .college-guide-container h4::before {
-  content: '📅';
+  content: '';
   position: absolute;
   /* FIX: Adjusted left position to be slightly more from the border */
   left: 1.5rem;
