@@ -12,7 +12,7 @@ const Footer = () => {
         </p>
         <div className="legal-links">
           {/* Corrected Link component structure */}
-          <Link href="/privacy-policy" passHref legacyBehavior>
+          <Link href="/privacy" passHref legacyBehavior>
             <a className="privacy-policy-link">Privacy Policy</a>
           </Link>
         </div>
