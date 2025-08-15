@@ -31,7 +31,7 @@
   margin-right: auto;
 }
 
-.site-footer .copyright, .site-footer .legal-links {
+.site-footer .copyright, .site-footer .privacy-policy-link {
   font-size: 0.85rem; /* Slightly larger for clarity */
   color: #a0a8b4; /* A soft, subtle gray for secondary text */
 }
