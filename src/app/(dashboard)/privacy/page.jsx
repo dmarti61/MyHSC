@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
         <p className="mb-4">
           Your privacy is important to us. This privacy policy document outlines the types of personal information that is received and collected by our website and how it is used.
         </p>
-        
+
         <h2 className="text-2xl font-semibold mt-6 mb-2">Information We Collect</h2>
         <p className="mb-4">
           When you use our website, we may collect information in a few different ways.
@@ -44,6 +44,21 @@ const PrivacyPolicy = () => {
           Like many other websites, we make use of log files. The information inside the log files includes internet protocol (IP) addresses, browser type, and other non-personally identifiable information. This information is used for website administration and to analyze trends.
         </p>
         
+        <h2 className="text-2xl font-semibold mt-6 mb-2">Data Retention</h2>
+        <p className="mb-4">
+          We retain personal data submitted through our contact form for a period necessary to respond to your inquiry and for our records, typically no longer than six months, after which it is securely deleted. Quiz answers stored in cookies are automatically deleted after 24 hours.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6 mb-2">Your Data Rights</h2>
+        <p className="mb-4">
+          You have the right to access, update, or request the deletion of your personal data. To exercise these rights or if you have questions about our data practices, please contact us at <a href="mailto:daniel@myhscounselor.com" className="text-blue-600 hover:underline">daniel@myhscounselor.com</a>.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-6 mb-2">Data Security</h2>
+        <p className="mb-4">
+          We take reasonable precautions to protect the personal information we collect. Our website uses **SSL/TLS encryption** to secure all data transmitted between your browser and our server. We implement other security measures to help prevent unauthorized access to your data.
+        </p>
+
         <h2 className="text-2xl font-semibold mt-6 mb-2">Consent</h2>
         <p className="mb-4">
           By using our website, you hereby consent to our privacy policy and agree to its terms.
