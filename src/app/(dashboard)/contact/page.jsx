@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link'; // Import Link for internal routing
 import '@/styles/contact.css';
 
 const Contact = () => {
@@ -11,6 +12,7 @@ const Contact = () => {
     siteRating: '',
     howDidYouHear: '',
     userRole: '',
+    privacyPolicyConsent: false, // New state for the consent checkbox
     'bot-field': '',
   });
 
@@ -41,15 +43,22 @@ const Contact = () => {
       setSubmissionStatus('success');
       return;
     }
+    
+    // Check if the privacy policy checkbox is checked
+    if (!formData.privacyPolicyConsent) {
+      alert('Please agree to our Privacy Policy before submitting the form.');
+      setSubmissionStatus(null);
+      return;
+    }
 
     try {
-    const response = await fetch("/api/contact", { // <-- Corrected URL
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json', // <-- Add this header
-      },
-      body: JSON.stringify(formData), // <-- Stringify the form data
-    });
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
       if (response.ok) {
         setSubmissionStatus('success');
@@ -60,6 +69,8 @@ const Contact = () => {
           suggestionsFeedback: '',
           siteRating: '',
           howDidYouHear: '',
+          userRole: '',
+          privacyPolicyConsent: false, // Reset consent state
           'bot-field': ''
         });
         alert('Thank you for your message! We will get back to you soon.');
@@ -84,7 +95,7 @@ const Contact = () => {
 
       <form name="contact" onSubmit={handleSubmit} className="cloudflare-form">
         <input type="hidden" name="form-name" value="contact" />
-
+        
         {/* Honeypot field */}
         <p style={{ display: 'none' }}>
           <label>
@@ -158,7 +169,6 @@ const Contact = () => {
                   value="Excellent"
                   checked={formData.siteRating === 'Excellent'}
                   onChange={handleChange}
-                  // The 'required' attribute has been removed
                 />
                 Excellent
               </label>
@@ -169,7 +179,6 @@ const Contact = () => {
                   value="Good"
                   checked={formData.siteRating === 'Good'}
                   onChange={handleChange}
-                  // The 'required' attribute has been removed
                 />
                 Good
               </label>
@@ -180,7 +189,6 @@ const Contact = () => {
                   value="Fair"
                   checked={formData.siteRating === 'Fair'}
                   onChange={handleChange}
-                  // The 'required' attribute has been removed
                 />
                 Fair
               </label>
@@ -191,7 +199,6 @@ const Contact = () => {
                   value="Poor"
                   checked={formData.siteRating === 'Poor'}
                   onChange={handleChange}
-                  // The 'required' attribute has been removed
                 />
                 Poor
               </label>
@@ -206,7 +213,6 @@ const Contact = () => {
             name="howDidYouHear"
             value={formData.howDidYouHear}
             onChange={handleChange}
-            // The 'required' attribute has been removed
           >
             <option value="">--Please choose an option--</option>
             <option value="Friend/Colleague">Friend/Colleague</option>
@@ -218,21 +224,41 @@ const Contact = () => {
         </div>
         
         <div className="form-group">
-  <label htmlFor="userRole">I am a... <span className="optional">(optional)</span></label>
-  <select
-    id="userRole"
-    name="userRole"
-    value={formData.userRole}
-    onChange={handleChange}
-  >
-    <option value="">--Please choose one--</option>
-    <option value="Parent">Parent</option>
-    <option value="High School Student">High School Student</option>
-    <option value="College Student">College Student</option>
-    <option value="High School Counselor">High School Counselor</option>
-    <option value="Other">Other</option>
-  </select>
-</div>
+          <label htmlFor="userRole">I am a... <span className="optional">(optional)</span></label>
+          <select
+            id="userRole"
+            name="userRole"
+            value={formData.userRole}
+            onChange={handleChange}
+          >
+            <option value="">--Please choose one--</option>
+            <option value="Parent">Parent</option>
+            <option value="High School Student">High School Student</option>
+            <option value="College Student">College Student</option>
+            <option value="High School Counselor">High School Counselor</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        {/* --- Start of new privacy policy consent block --- */}
+        <div className="form-group privacy-policy-consent">
+          <label className="checkbox-label">
+            <input
+              type="checkbox"
+              name="privacyPolicyConsent"
+              checked={formData.privacyPolicyConsent}
+              onChange={handleChange}
+              required // Making this field required
+            />
+            I have read and agree to the{' '}
+            <Link href="/privacy" passHref legacyBehavior>
+              <a target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                Privacy Policy
+              </a>
+            </Link>
+          </label>
+        </div>
+        {/* --- End of new privacy policy consent block --- */}
 
         <div className="form-group button-group">
           <button type="submit" disabled={submissionStatus === 'submitting'}>
