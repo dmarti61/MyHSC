@@ -4,15 +4,16 @@ import React from 'react';
 import CookieConsent from 'react-cookie-consent';
 import Link from 'next/link';
 
-const CookieConsentBanner = () => {
+const CookieConsentBanner = ({ onAccept }) => {
   const handleAccept = () => {
-    // Here you would conditionally load your Google Analytics
-    // and AdSense scripts after the user accepts.
+    // This function will call the onAccept prop passed from the layout.
+    onAccept();
   };
 
   const handleDecline = () => {
     // Logic to run if the user declines cookies.
-    // Ensure no non-essential cookies are set.
+    console.log("User has declined cookies.");
+    // This is where you would ensure no non-essential cookies are set.
   };
 
   return (
