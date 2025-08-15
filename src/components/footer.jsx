@@ -1,6 +1,6 @@
 // src/components/footer.jsx
 import React from 'react';
-import Link from 'next/link'; // Import the Link component
+import Link from 'next/link';
 import '@/styles/footer.css';
 
 const Footer = () => {
@@ -11,10 +11,10 @@ const Footer = () => {
           This website is for entertainment purposes only and is meant to serve as a general guide. It is not legal, financial, or academic advising.
         </p>
         <div className="legal-links">
-          <Link href="/privacy" passHref legacyBehavior>
+          {/* Corrected Link component structure */}
+          <Link href="/privacy-policy" passHref legacyBehavior>
             <a className="privacy-policy-link">Privacy Policy</a>
           </Link>
-          {/* You can add more links here in the future, like Terms of Use */}
         </div>
         <p className="copyright">
           &copy; {new Date().getFullYear()} MyHSCounselor. All rights reserved.
