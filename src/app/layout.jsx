@@ -9,9 +9,6 @@ import Footer from '@/components/footer';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
 import { metadata as seoMetadata } from './metadata'; // Import the metadata
 
-// Use the imported metadata
-export const metadata = seoMetadata;
-
 export default function RootLayout({ children }) {
   const [isConsentAccepted, setIsConsentAccepted] = useState(false);
 
