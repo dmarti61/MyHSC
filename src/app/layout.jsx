@@ -6,7 +6,7 @@ import Script from 'next/script';
 import Cookies from 'js-cookie';
 import '@/styles/global.css';
 import Footer from '@/components/footer';
-import CookieConsentBanner from '@/components/CookieConsentBanner';
+import CookieConsentBanner from '@/components/cookieconsentbanner';
 import { metadata as seoMetadata } from './metadata';
 
 export default function RootLayout({ children }) {
