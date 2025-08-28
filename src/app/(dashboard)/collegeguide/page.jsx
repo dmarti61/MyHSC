@@ -74,6 +74,14 @@ const CollegeGuide = () => (
         <p className="why-it-matters">**Why it matters:** Colleges look for well-rounded individuals who contribute to their communities and demonstrate initiative beyond academics. Consistent involvement and leadership stand out significantly.</p>
       </li>
     </ul>
+    
+     <section className="dual-credit-advice">
+        <h3>Dual Credit: The Smart Way to Get a Head Start</h3>
+        <p>If your high school offers **dual credit** courses in partnership with a local community college, you should seriously consider taking them. Dual credit allows you to earn both high school and college credit simultaneously, which can save you a significant amount of money and time once you get to college.</p>
+        <p className="advice-box">
+            **Key Tip:** While in-state public universities in your state are often more likely to accept and apply dual credit courses seamlessly, **out-of-state and private colleges may be more selective.** Before committing to a dual credit course, check the website of your prospective colleges or, better yet, contact their admissions office directly to ask about their specific dual credit transfer policies. Getting this information upfront can save you from a disappointing surprise down the road.
+        </p>
+    </section>
 
     <h3>Spring (January - May)</h3>
     <ul>
@@ -141,14 +149,6 @@ const CollegeGuide = () => (
     <hr />
     
     <h2>Senior Year: Application Season</h2>
-
-    <section className="dual-credit-advice">
-        <h3>Dual Credit: The Smart Way to Get a Head Start</h3>
-        <p>If your high school offers **dual credit** courses in partnership with a local community college, you should seriously consider taking them. Dual credit allows you to earn both high school and college credit simultaneously, which can save you a significant amount of money and time once you get to college.</p>
-        <p className="advice-box">
-            **Key Tip:** While in-state public universities in your state are often more likely to accept and apply dual credit courses seamlessly, **out-of-state and private colleges may be more selective.** Before committing to a dual credit course, check the website of your prospective colleges or, better yet, contact their admissions office directly to ask about their specific dual credit transfer policies. Getting this information upfront can save you from a disappointing surprise down the road.
-        </p>
-    </section>
     
     <h3>Fall (September - November)</h3>
     <ul>
