@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import the Next.js Image component
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import '@/styles/navbar.css';
 
@@ -10,6 +10,7 @@ const navItems = [
   { label: 'My Results', path: '/results', id: 'my-results' },
   {
     label: 'Explore My Path',
+    path: '/explore', // parent link
     id: 'explore-my-path',
     children: [
       { label: 'Not Sure Where to Start?', path: '/notsure' },
@@ -23,6 +24,7 @@ const navItems = [
   },
   {
     label: 'Resources',
+    path: '/resources',
     id: 'resources',
     children: [
       { label: 'Find Careers', path: '/explore' },
@@ -35,6 +37,7 @@ const navItems = [
   },
   {
     label: 'About Us',
+    path: '/about',
     id: 'about-us',
     children: [
       { label: 'About My HS Counselor', path: '/about' },
@@ -43,17 +46,14 @@ const navItems = [
   },
 ];
 
-const Navbar = () => { // Renamed the component to Navbar
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const pathname = usePathname();
   const hamburgerRef = useRef(null);
   const closeBtnRef = useRef(null);
-  const navbarRef = useRef(null);
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+  const handleMenuToggle = () => setIsMenuOpen((prev) => !prev);
 
   const closeMenuAndDropdowns = () => {
     setIsMenuOpen(false);
@@ -70,7 +70,6 @@ const Navbar = () => { // Renamed the component to Navbar
       document.documentElement.classList.remove('menu-open');
       hamburgerRef.current?.focus();
     }
-
     return () => {
       document.body.classList.remove('menu-open');
       document.documentElement.classList.remove('menu-open');
@@ -83,9 +82,7 @@ const Navbar = () => { // Renamed the component to Navbar
 
   useEffect(() => {
     const handleEscKey = (e) => {
-      if (e.key === 'Escape') {
-        closeMenuAndDropdowns();
-      }
+      if (e.key === 'Escape') closeMenuAndDropdowns();
     };
     document.addEventListener('keydown', handleEscKey);
     return () => document.removeEventListener('keydown', handleEscKey);
@@ -99,7 +96,7 @@ const Navbar = () => { // Renamed the component to Navbar
   };
 
   return (
-    <nav className="navbar" aria-label="Main navigation" ref={navbarRef}>
+    <nav className="navbar" aria-label="Main navigation">
       <div
         className={`nav-overlay ${isMenuOpen ? 'show' : ''}`}
         onClick={closeMenuAndDropdowns}
@@ -107,28 +104,30 @@ const Navbar = () => { // Renamed the component to Navbar
       />
       <div className="navbar-header">
         <Link href="/" className="navbar-logo" aria-label="Home">
-          <Image 
-            src="/logo.png" 
-            alt="My HS Counselor Logo" 
-            fill style= {{ objectFit: "contain"}}
-            priority={true} // Use priority instead of loading="eager" for LCP
+          <Image
+            src="/logo.png"
+            alt="My HS Counselor Logo"
+            fill
+            style={{ objectFit: 'contain' }}
+            priority
           />
         </Link>
-<div className="navbar-logo-link">
-        <button
-          ref={hamburgerRef}
-          className="hamburger"
-          onClick={handleMenuToggle}
-          aria-expanded={isMenuOpen}
-          aria-controls="primary-navigation"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-        >
-          <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
-          <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
-          <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
-        </button>
+        <div className="navbar-logo-link">
+          <button
+            ref={hamburgerRef}
+            className="hamburger"
+            onClick={handleMenuToggle}
+            aria-expanded={isMenuOpen}
+            aria-controls="primary-navigation"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
+            <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
+            <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
+          </button>
+        </div>
       </div>
-</div>
+
       <div
         id="primary-navigation"
         className={`nav-links ${isMenuOpen ? 'show' : ''}`}
@@ -148,14 +147,10 @@ const Navbar = () => { // Renamed the component to Navbar
 
         {isMenuOpen ? (
           <div className="nav-links-scroll-wrapper">
-            <ul role="menubar">
-              {renderNavItems()}
-            </ul>
+            <ul role="menubar">{renderNavItems()}</ul>
           </div>
         ) : (
-          <ul role="menubar">
-            {renderNavItems()}
-          </ul>
+          <ul role="menubar">{renderNavItems()}</ul>
         )}
       </div>
     </nav>
@@ -173,18 +168,36 @@ const Navbar = () => { // Renamed the component to Navbar
           className={isParentActive ? 'active-parent' : ''}
         >
           {item.children ? (
-            <>
+            <div className="nav-parent-wrapper">
+              <Link
+                href={item.path}
+                role="menuitem"
+                className={`nav-top-level-item ${
+                  pathname === item.path ? 'active-item' : ''
+                }`}
+                onClick={closeMenuAndDropdowns}
+              >
+                {item.label}
+              </Link>
               <button
-                className={`nav-top-level-item nav-dropdown-btn`}
+                className="nav-dropdown-toggle"
                 aria-haspopup="true"
                 aria-expanded={isDropdownOpen}
                 aria-controls={`${item.id}-submenu`}
                 onClick={() => toggleDropdown(item.id)}
               >
-                {item.label}
                 <span className="dropdown-icon" aria-hidden="true">
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
-                    <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="2" />
+                  <svg
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M1 1l5 5 5-5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
                   </svg>
                 </span>
               </button>
@@ -208,12 +221,14 @@ const Navbar = () => { // Renamed the component to Navbar
                   </li>
                 ))}
               </ul>
-            </>
+            </div>
           ) : (
             <Link
               href={item.path}
               role="menuitem"
-              className={`nav-top-level-item ${pathname === item.path ? 'active-item' : ''}`}
+              className={`nav-top-level-item ${
+                pathname === item.path ? 'active-item' : ''
+              }`}
               onClick={closeMenuAndDropdowns}
             >
               {item.label}
@@ -225,4 +240,4 @@ const Navbar = () => { // Renamed the component to Navbar
   }
 };
 
-export default Navbar; // Export the renamed component
+export default Navbar;
