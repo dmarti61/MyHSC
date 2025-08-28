@@ -37,7 +37,7 @@ const About = () => {
         </p>
         <ul>
           <li><strong>Personalized Clarity:</strong> Our unique quiz goes beyond simple personality types. It helps you uncover directions that are genuinely aligned with your strengths and interests, just as it did for me.</li>
-          <li><strong>Actionable Roadmaps:</strong> We don't just give you a list of careers. Our step-by-step guides are built directly from my personal framework, providing you with a proven and reliable path forward, whether it's for college, a trade, the military, or somrthing in-between.</li>
+          <li><strong>Actionable Roadmaps:</strong> We don't just give you a list of careers. Our step-by-step guides are built directly from my personal framework, providing you with a proven and reliable path forward, whether it's for college, a trade, the military, or something in-between.</li>
           <li><strong>All Paths Honored:</strong> Every meaningful path is a worthy one. Whether you choose a four-year degree, a trade certification, a military career, or into the workforce, we provide direct and honest guidance to help you build a future that truly excites you.</li>
         </ul>
       </div>
