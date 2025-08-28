@@ -77,8 +77,9 @@ const CollegeGuide = () => (
     
      <section className="dual-credit-advice">
         <h3>Dual Credit: The Smart Way to Get a Head Start</h3>
-        <p>If your high school offers **dual credit** courses in partnership with a local community college, you should seriously consider taking them. Dual credit allows you to earn both high school and college credit simultaneously, which can save you a significant amount of money and time once you get to college.</p>
-        <p className="advice-box">
+        <p>If your high school offers dual credit courses in partnership with a local community college, you should seriously consider taking them. Dual credit allows you to earn both high school and college credit simultaneously, which can save you a significant amount of money and time once you get to college.</p>
+        <p>Unlike AP or IB exams, where your college credit depends on a single test score, your grade in a dual credit course is the grade that will be recorded on a college transcript. This means the credit is earned by successfully completing the class, with no need for an additional high-stakes test. While taking a dual credit course can be a great way to get a head start, remember that the grade you earn will be on your permanent college record, so it's important to be committed to doing well.</p>
+          <p className="advice-box">
             **Key Tip:** While in-state public universities in your state are often more likely to accept and apply dual credit courses seamlessly, **out-of-state and private colleges may be more selective.** Before committing to a dual credit course, check the website of your prospective colleges or, better yet, contact their admissions office directly to ask about their specific dual credit transfer policies. Getting this information upfront can save you from a disappointing surprise down the road.
         </p>
     </section>
