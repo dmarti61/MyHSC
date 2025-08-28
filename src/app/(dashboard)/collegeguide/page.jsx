@@ -64,7 +64,7 @@ const CollegeGuide = () => (
       <li>**Initial College Research:** Start exploring different types of colleges—large versus small, public versus private, urban versus rural. Look for academic programs that align with your emerging interests.
         <p className="why-it-matters">**Why it matters:** Understanding the diverse landscape of higher education helps you identify environments where you're most likely to thrive.</p>
       </li>
-      <li>**Strengthen Your Grades & Take Challenging Courses:** Continue to perform well academically. If your school offers **AP, IB, or Dual Enrollment** courses, consider taking them, especially in subjects where you feel confident.
+      <li>**Strengthen Your Grades & Take Challenging Courses:** Continue to perform well academically. If your school offers **AP, IB, or Dual Enrollment** courses, consider taking them, especially in subjects where you feel confident. See note below about dual-credit courses prior to enrollment. 
         <p className="why-it-matters">**Why it matters:** Colleges want to see that you can handle rigorous coursework and are prepared for the demands of university-level academics.</p>
       </li>
       <li>**PSAT/Practice Exams:** Take the **PSAT** if you haven't already. This is valuable practice for the SAT and can also qualify you for National Merit Scholarships.
