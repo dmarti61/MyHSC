@@ -134,6 +134,14 @@ const MilitaryAcademiesGuide = () => (
         <li><strong>Financial Considerations:</strong> Once you graduate college and are commissioned as an officer, your military branch will typically reimburse your college expenses (tuition, room, and board), making your education effectively free, usually in exchange for a minimum of four years of military service. Keep in mind that until commissioning, expenses are generally out-of-pocket, and there may be repayment obligations if you choose not to complete the program and serve.</li>
       </ul>
 
+      <h4>Key Considerations for Students with Existing College Credits:</h4>
+      <ul>
+        <li>ROTC is typically a **four-year program**, but college credits from high school (e.g., AP or dual enrollment) can allow for an **accelerated path**.</li>
+        <li>If you enter college with enough credits to be a sophomore, you may be able to complete the program in **three years**. For some, a two-year option is possible by attending a summer training course to substitute for the first two years of the program.</li>
+        <li>Be aware that your service commitment to the military (e.g., 4 years of active duty) does not start until you commission as an officer, regardless of how long the program took you to complete.</li>
+        <li>It is essential to contact the ROTC recruiting officer at the college you plan to attend to discuss your specific situation and see what accelerated options are available.</li>
+      </ul>
+
       <h4>Your Next Steps for ROTC:</h4>
       <ul>
         <li>Review the list of colleges you are considering (or have chosen) to see if they offer an ROTC program for the military branch you are interested in (Army, Navy, Air Force, Marines).</li>
