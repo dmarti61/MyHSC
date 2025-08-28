@@ -97,11 +97,6 @@ const Navbar = () => {
 
   return (
     <nav className="navbar" aria-label="Main navigation">
-      <div
-        className={`nav-overlay ${isMenuOpen ? 'show' : ''}`}
-        onClick={closeMenuAndDropdowns}
-        aria-hidden="true"
-      />
       <div className="navbar-header">
         <Link href="/" className="navbar-logo" aria-label="Home">
           <Image
@@ -112,47 +107,45 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <div className="navbar-logo-link">
-          <button
-            ref={hamburgerRef}
-            className="hamburger"
-            onClick={handleMenuToggle}
-            aria-expanded={isMenuOpen}
-            aria-controls="primary-navigation"
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          >
-            <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
-            <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
-            <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
-          </button>
-        </div>
+        <button
+          ref={hamburgerRef}
+          className="hamburger"
+          onClick={handleMenuToggle}
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        >
+          <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
+          <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
+          <span className={`bar ${isMenuOpen ? 'open' : ''}`} />
+        </button>
       </div>
 
       <div
         id="primary-navigation"
         className={`nav-links ${isMenuOpen ? 'show' : ''}`}
+        aria-hidden={!isMenuOpen}
       >
-        {isMenuOpen && (
-          <div className="nav-close-container">
-            <button
-              ref={closeBtnRef}
-              className="nav-close-btn"
-              onClick={closeMenuAndDropdowns}
-              aria-label="Close menu"
-            >
-              &times;
-            </button>
-          </div>
-        )}
+        <div className="nav-close-container">
+          <button
+            ref={closeBtnRef}
+            className="nav-close-btn"
+            onClick={closeMenuAndDropdowns}
+            aria-label="Close menu"
+          >
+            &times;
+          </button>
+        </div>
 
-        {isMenuOpen ? (
-          <div className="nav-links-scroll-wrapper">
-            <ul role="menubar">{renderNavItems()}</ul>
-          </div>
-        ) : (
+        <div className="nav-links-scroll-wrapper">
           <ul role="menubar">{renderNavItems()}</ul>
-        )}
+        </div>
       </div>
+      <div
+        className={`nav-overlay ${isMenuOpen ? 'show' : ''}`}
+        onClick={closeMenuAndDropdowns}
+        aria-hidden="true"
+      />
     </nav>
   );
 
@@ -169,23 +162,14 @@ const Navbar = () => {
         >
           {item.children ? (
             <div className="nav-parent-wrapper">
-              <Link
-                href={item.path}
-                role="menuitem"
-                className={`nav-top-level-item ${
-                  pathname === item.path ? 'active-item' : ''
-                }`}
-                onClick={closeMenuAndDropdowns}
-              >
-                {item.label}
-              </Link>
               <button
-                className="nav-dropdown-toggle"
+                className="nav-top-level-item nav-dropdown-toggle"
                 aria-haspopup="true"
                 aria-expanded={isDropdownOpen}
                 aria-controls={`${item.id}-submenu`}
                 onClick={() => toggleDropdown(item.id)}
               >
+                {item.label}
                 <span className="dropdown-icon" aria-hidden="true">
                   <svg
                     width="12"
