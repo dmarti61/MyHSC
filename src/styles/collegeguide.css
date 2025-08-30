@@ -121,7 +121,7 @@ hr {
 }
 
 .college-guide-container ul li::before {
-  content: '✓'; /* A simple, clear checkmark */
+  content: '→'; /* A simple, clear checkmark */
   position: absolute;
   left: 0;
   color: var(--success-green); /* Use the brand's success green */
