@@ -40,7 +40,7 @@ const MilitaryAcademiesGuide = () => (
         <div className="academy-item">
             <h4>United States Naval Academy (USNA)</h4>
             <p>Trains officers for the U.S. Navy and Marine Corps.</p>
-            <p><a href="http://www.usna.edu/Admissions/Steps-for-Admission/" target="_blank" rel="noopener noreferrer">Admission Steps</a></p>
+            <p><a href="https://www.usna.edu/Admissions/Apply/#fndtn-panel1-Steps-for" target="_blank" rel="noopener noreferrer">Admission Steps</a></p>
         </div>
         <div className="academy-item">
             <h4>United States Air Force Academy (USAFA)</h4>
