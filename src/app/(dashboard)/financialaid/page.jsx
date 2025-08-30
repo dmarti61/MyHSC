@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: 'Your Complete Guide to Financial Aid',
     description: 'Break down the complex world of financial aid with this easy-to-follow guide covering FAFSA, scholarships, grants, and how to pay for your education.',
-    url: 'https://myhscounselor.com/financial-aid',
+    url: 'https://myhscounselor.com/financialaid',
     siteName: 'MyHSCounselor.com',
     images: [
       {
@@ -22,7 +22,7 @@ export const metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://myhscounselor.com/financial-aid',
+    canonical: 'https://myhscounselor.com/financialaid',
   },
 };
 
