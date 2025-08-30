@@ -45,7 +45,7 @@ const MilitaryAcademiesGuide = () => (
         <div className="academy-item">
             <h4>United States Air Force Academy (USAFA)</h4>
             <p>Develops leaders for the U.S. Air Force and U.S. Space Force.</p>
-            <p><a href="http://www.academyadmissions.com/admissions/the-application-process/application-steps/" target="_blank" rel="noopener noreferrer">Application Process</a></p>
+            <p><a href="https://www.academyadmissions.com/apply/" target="_blank" rel="noopener noreferrer">Application Process</a></p>
         </div>
         <div className="academy-item">
             <h4>United States Coast Guard Academy (USCGA)</h4>
