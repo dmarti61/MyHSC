@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Your Guide to Two-Year Colleges & Community College',
     description: 'Explore the benefits of community college, including cost savings, flexible schedules, and diverse programs that lead to careers or a seamless transfer to a four-year university.',
-    url: 'https://myhscounselor.com/two-year',
+    url: 'https://myhscounselor.com/twoyear',
     siteName: 'MyHSCounselor.com',
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://myhscounselor.com/two-year',
+    canonical: 'https://myhscounselor.com/twoyear',
   },
 };
 
