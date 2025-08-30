@@ -173,7 +173,7 @@ const CollegeGuide = () => (
       <li>**Final Application Review:** Before you hit that submit button, have someone else carefully review your entire application. The application fee (around $20, give or take) is a small investment for such a crucial submission.</li>
       <li>**Standardized Testing (ACT/SAT):** Ideally completed during junior year, but certainly by the fall of senior year, you should have taken both the ACT and the SAT.
         <ul>
-          <li>**SAT:** <a href="http://sat.collegeboard.org/register/" target="_blank" rel="noopener noreferrer">sat.collegeboard.org/register/</a></li>
+          <li>**SAT:** <a href="https://satsuite.collegeboard.org/sat/registration" target="_blank" rel="noopener noreferrer">sat.collegeboard.org/register/</a></li>
           <li><a href="http://www.actstudent.org/regist/" target="_blank" rel="noopener noreferrer">**ACT:** actstudent.org/regist/</a></li>
         </ul>
         <p className="advice-box">
