@@ -46,7 +46,7 @@ const CollegeGuide = () => (
     </p>
 
     <p className="pathway-note">
-    While this guide focuses on securing a <strong>four-year bachelor's degree</strong>, it’s equally important to consider <strong>two-year colleges (community colleges)</strong> as a powerful starting point. These institutions often offer more affordable tuition, flexible schedules, and career-ready training—and many students use this path to transfer smoothly to four-year universities. To explore this option further, visit our <Link href="/two-year-college">Two-Year College & Community College Guide</Link>.
+    While this guide focuses on securing a <strong>four-year bachelor's degree</strong>, it’s equally important to consider <strong>two-year colleges (community colleges)</strong> as a powerful starting point. These institutions often offer more affordable tuition, flexible schedules, and career-ready training—and many students use this path to transfer smoothly to four-year universities. To explore this option further, visit our <Link href="/twoyear">Two-Year College & Community College Guide</Link>.
     </p>
 
     <p className="military-interest-note">
