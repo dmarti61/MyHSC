@@ -50,7 +50,7 @@ const MilitaryAcademiesGuide = () => (
         <div className="academy-item">
             <h4>United States Coast Guard Academy (USCGA)</h4>
             <p>Trains officers for the U.S. Coast Guard. <strong>Unique Feature: No congressional nomination is needed for admission!</strong></p>
-            <p><a href="http://www.uscga.edu/admissions2.aspx?id=60" target="_blank" rel="noopener noreferrer">Admissions Information</a></p>
+            <p><a href="https://uscga.edu/admissions/getting-started/" target="_blank" rel="noopener noreferrer">Admissions Information</a></p>
         </div>
         <div className="academy-item">
             <h4>United States Merchant Marine Academy (USMMA)</h4>
