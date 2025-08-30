@@ -166,7 +166,7 @@ const MilitaryAcademiesGuide = () => (
       <ul>
         <li><strong>United States Naval Academy:</strong> <a href="http://www.usna.edu/" target="_blank" rel="noopener noreferrer">usna.edu</a></li>
         <li><strong>United States Air Force Academy:</strong> <a href="https://www.academyadmissions.com" target="_blank" rel="noopener noreferrer">academyadmissions.com</a></li>
-        <li><strong>United States Coast Guard Academy:</strong> <a href="https://uscga.edu" target="_blank" rel="noopener noreferrer">cga.edu</a></li>
+        <li><strong>United States Coast Guard Academy:</strong> <a href="https://uscga.edu" target="_blank" rel="noopener noreferrer">uscga.edu</a></li>
         <li><strong>United States Merchant Marine Academy:</strong> <a href="http://www.usmma.edu/" target="_blank" rel="noopener noreferrer">usmma.edu</a></li>
         <li><strong>United States Military Academy (West Point):</strong> <a href="http://www.westpoint.edu/" target="_blank" rel="noopener noreferrer">westpoint.edu</a></li>
       </ul>
