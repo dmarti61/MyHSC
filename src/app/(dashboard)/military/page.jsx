@@ -60,7 +60,7 @@ const MilitaryAcademiesGuide = () => (
         <div className="academy-item">
             <h4>United States Military Academy (USMA - West Point)</h4>
             <p>Prepares future officers for the U.S. Army.</p>
-            <p><a href="http://www.usma.edu/admissions/SitePages/Steps.aspx" target="_blank" rel="noopener noreferrer">Admission Steps</a></p>
+            <p><a href="https://www.westpoint.edu/admissions/steps-to-admission" target="_blank" rel="noopener noreferrer">Admission Steps</a></p>
         </div>
       </div>
     </section>
