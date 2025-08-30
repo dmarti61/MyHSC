@@ -59,7 +59,7 @@ const FinancialAid = () => (
       </p>
       <p>
         For many private colleges, you'll also need to complete the{" "}
-        <a href="https://cssprofile.collegeboard.org/" target="_blank" rel="noopener noreferrer">
+        <a href="https://cssprofile.collegeboard.org/about" target="_blank" rel="noopener noreferrer">
           <strong>CSS Profile,</strong>
         </a> which helps institutions determine eligibility for their own aid.
       </p>
