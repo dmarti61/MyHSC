@@ -173,8 +173,8 @@ const CollegeGuide = () => (
       <li>**Final Application Review:** Before you hit that submit button, have someone else carefully review your entire application. The application fee (around $20, give or take) is a small investment for such a crucial submission.</li>
       <li>**Standardized Testing (ACT/SAT):** Ideally completed during junior year, but certainly by the fall of senior year, you should have taken both the ACT and the SAT.
         <ul>
-          <li>**SAT:** <a href="https://satsuite.collegeboard.org/sat/registration" target="_blank" rel="noopener noreferrer">sat.collegeboard.org/register/</a></li>
-          <li><a href="http://www.actstudent.org/regist/" target="_blank" rel="noopener noreferrer">**ACT:** actstudent.org/regist/</a></li>
+          <li>**SAT:** <a href="https://satsuite.collegeboard.org/sat/registration" target="_blank" rel="noopener noreferrer">satsuite.collegeboard.org/sat/registration/</a></li>
+          <li><a href="https://www.act.org/content/act/en/products-and-services/the-act/registration.html" target="_blank" rel="noopener noreferrer">**ACT:** actstudent.org/regist/</a></li>
         </ul>
         <p className="advice-box">
           **Strategic Tip:** Take both exams, as you will typically submit only your higher score. On the application, they don't need to know you took both; just submit the one where you achieved your highest score. For example, if you score a 33 on the ACT and a 1530 on the SAT, prioritize the ACT score, as a 33 is very competitive (the highest possible is a 36). If you believe you can further improve your ACT score, focus your study efforts there for a retake, rather than on the SAT.
