@@ -52,11 +52,28 @@ const CollegeGuide = () => (
     <p className="military-interest-note">
     If you're interested in combining higher education with military service, <strong>U.S. Military Service Academies and ROTC programs</strong> offer unique and rewarding pathways. These options emphasize leadership, service, and scholarship, and require a distinct application process. Learn more through our <Link href="/military">Military Academies & ROTC Guide</Link>.
     </p>
+    
+    <hr />
+
+    <section className="table-of-contents">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#junior-year">Junior Year: Building Your Foundation</a></li>
+        <li><a href="#choosing-colleges">Choosing Your Colleges: Location, Cost, and Strategic Fit</a></li>
+        <li><a href="#senior-year">Senior Year: Application Season</a></li>
+        <li><a href="#financial-aid">Understanding Financial Aid: FAFSA, Loans & Work-Study</a></li>
+        <li><a href="#thriving-in-college">Thriving in College: Strategies for Success</a></li>
+        <li><a href="#key-tools">Key Tools & Resources</a></li>
+        <li><a href="#crafting-essays">Crafting Compelling Essays: Expert Tips</a></li>
+        <li><a href="#bonus-tips">Strategic Bonus Tips</a></li>
+        <li><a href="#common-pitfalls">Common Pitfalls to Avoid</a></li>
+      </ul>
+    </section>
 
     <hr />
 
     {/* Use <h2> for major sections and <h4> for sub-sections. */}
-    <h2>Junior Year: Building Your Foundation</h2>
+    <h2 id="junior-year">Junior Year: Building Your Foundation</h2>
 
     <h3>Fall (September - December)</h3>
     <ul>
@@ -121,7 +138,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h2>Choosing Your Colleges: Location, Cost, and Strategic Fit</h2>
+    <h2 id="choosing-colleges">Choosing Your Colleges: Location, Cost, and Strategic Fit</h2>
     <p>This is where your research culminates. Prioritize institutions that truly align with your goals and where you'll be most successful, rather than just focusing on brand recognition.</p>
     <div className="choice-considerations">
       <h3>Finding Your Fit and Launching Your Career:</h3>
@@ -149,7 +166,7 @@ const CollegeGuide = () => (
 
     <hr />
     
-    <h2>Senior Year: Application Season</h2>
+    <h2 id="senior-year">Senior Year: Application Season</h2>
     
     <h3>Fall (September - November)</h3>
     <ul>
@@ -227,7 +244,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h2>Understanding Financial Aid: FAFSA, Loans & Work-Study</h2>
+    <h2 id="financial-aid">Understanding Financial Aid: FAFSA, Loans & Work-Study</h2>
     <p>This section addresses the crucial topic of financing your education. Understanding financial aid is key to making college accessible and affordable.</p>
     <ul>
       <li>**FAFSA (Free Application for Federal Student Aid):** This is the primary gateway to unlocking federal financial aid, including **grants** (money you don't repay), **work-study** programs, and **federal student loans**.
@@ -253,7 +270,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h2>Thriving in College: Strategies for Success</h2>
+    <h2 id="thriving-in-college">Thriving in College: Strategies for Success</h2>
     <p>Once you've been accepted and are ready to go, congratulations! This is a tremendous accomplishment. Now, let's discuss how to make the most of your college experience.</p>
     <ul>
       <li>**Efficient Degree Completion (15-18 Credit Hours):** Aim to complete your degree efficiently. Taking around **15-18 credit hours per semester** (approximately 5-6 classes) is a manageable workload for many students with good time management. This approach helps you stay on track or even graduate early, which can mean less time accumulating loan interest and a quicker start to your desired career.</li>
@@ -263,7 +280,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h2>🛠️ Key Tools & Resources</h2>
+    <h2 id="key-tools">🛠️ Key Tools & Resources</h2>
     <ul>
       <li><a href="https://www.commonapp.org" target="_blank" rel="noopener noreferrer">**Common App**</a> — Apply to 1,000+ colleges using one common application.</li>
       <li><a href="https://www.coalitionforcollegeaccess.org" target="_blank" rel="noopener noreferrer">**Coalition App**</a> — Another widely used application platform by many colleges.</li>
@@ -281,7 +298,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h2>✍️ Crafting Compelling Essays: Expert Tips</h2>
+    <h2 id="crafting-essays">✍️ Crafting Compelling Essays: Expert Tips</h2>
     <ul>
       <li>**Start Early:** Procrastination is the enemy of a strong essay. Give yourself weeks, not just days, to develop and refine your thoughts.</li>
       <li>**Be Authentic:** Your unique voice and perspective are what colleges genuinely want to see. Don't try to be someone you're not; let your true self shine through.</li>
@@ -295,7 +312,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h2>💡 Strategic Bonus Tips</h2>
+    <h2 id="bonus-tips">💡 Strategic Bonus Tips</h2>
     <ul>
       <li>**Stay Organized!** Create a detailed spreadsheet with each college, its application type (Common App, direct), all deadlines (application, financial aid, scholarships), and required materials (essay prompts, LoRs, test scores). This organizational tool will be a lifesaver.</li>
       <li>**Prioritize Depth Over Breadth:** It's more impactful to be deeply involved in a few activities (including meaningful volunteering!) than superficially involved in many. Colleges value quality and sustained commitment.</li>
@@ -306,7 +323,7 @@ const CollegeGuide = () => (
 
     <hr />
 
-    <h2>🚫 Common Pitfalls to Avoid</h2>
+    <h2 id="common-pitfalls">🚫 Common Pitfalls to Avoid</h2>
     <ul>
       <li>**Missing Deadlines:** This is the most common and critical application error. Always aim to submit your materials a few days early to avoid last-minute issues.</li>
       <li>**Generic Essays:** Do not use the same essay for every college unless the prompt is identical and you've verified it's acceptable. Tailor your essays to each institution.</li>
