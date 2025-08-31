@@ -229,6 +229,12 @@ li.active-parent > .nav-parent-wrapper > .nav-top-level-item {
   .navbar {
     justify-content: flex-start;
   }
+  
+  .navbar-header {
+    width: auto;
+    flex-shrink: 0;
+    }
+    
   .hamburger, .nav-close-container, .nav-overlay { display: none; }
 
   .nav-links {
