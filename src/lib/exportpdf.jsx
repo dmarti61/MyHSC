@@ -13,7 +13,7 @@ export const exportResultsAsPDF = ({ type, preference }) => {
   const mbtiData = MBTI_MAP[mbtiType];
   const pageHeight = doc.internal.pageSize.height;
   const websiteURL = 'https://www.myhscounselor.com';
-  const exploreURL = `${websiteURL}/explore`;
+  const exploreURL = `${websiteURL}/thankyou`;
 
   if (!mbtiData) {
     console.error(`MBTI data not found for type: ${mbtiType}`);
