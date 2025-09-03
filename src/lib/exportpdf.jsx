@@ -1,8 +1,11 @@
 import jsPDF from 'jspdf';
 import { CAREER_STATS } from '@/components/quiz/careerstats';
 import { MBTI_MAP, generateNextStepPhrase } from '@/components/quiz/mbtimap';
-import { GUIDES_TEXT_CONTENT } from '@/lib/guidestext';
+// NOTE: GUIDES_TEXT_CONTENT is no longer needed in this file
+// import { GUIDES_TEXT_CONTENT } from '@/lib/guidestext';
 import { interFont } from '@/lib/inter.js';
+// NOTE: You would need to add a Poppins font file here as well
+// import { poppinsFont } from '@/lib/poppins.js';
 
 export const exportResultsAsPDF = ({ type, preference }) => {
   const doc = new jsPDF('p', 'mm', 'a4');
@@ -10,6 +13,7 @@ export const exportResultsAsPDF = ({ type, preference }) => {
   const mbtiData = MBTI_MAP[mbtiType];
   const pageHeight = doc.internal.pageSize.height;
   const websiteURL = 'https://www.myhscounselor.com';
+  const exploreURL = `${websiteURL}/explore`;
 
   if (!mbtiData) {
     console.error(`MBTI data not found for type: ${mbtiType}`);
@@ -20,7 +24,7 @@ export const exportResultsAsPDF = ({ type, preference }) => {
   doc.addFileToVFS('Inter-Regular.ttf', interFont);
   doc.addFont('Inter-Regular.ttf', 'Inter', 'normal');
   doc.setFont('Inter');
-  // NOTE: You would need to add a Poppins font file here as well
+  // NOTE: Uncomment these lines if you have the poppinsFont file
   // doc.addFileToVFS('Poppins-Bold.ttf', poppinsFont);
   // doc.addFont('Poppins-Bold.ttf', 'Poppins', 'bold');
 
@@ -33,9 +37,7 @@ export const exportResultsAsPDF = ({ type, preference }) => {
   const brandBorderColor = '#e0e6f0';
   const brandHighlightBg = '#eaf2f8';
 
-
   // --- Summary Page Header ---
-  // FIX: Changing the background to a darker color so the white logo can be seen.
   doc.setFillColor(brandDarkBlueGray); 
   doc.rect(0, 0, doc.internal.pageSize.width, 30, 'F');
 
@@ -46,10 +48,9 @@ export const exportResultsAsPDF = ({ type, preference }) => {
   const logo = '/logo.png';
   doc.addImage(logo, 'PNG', logoX, logoY, logoWidth, logoHeight);
 
-  doc.setFont('Poppins', 'bold'); // Use the brand heading font for the title
-  doc.setFontSize(28); // Larger title for impact
+  doc.setFont('Poppins', 'bold'); 
+  doc.setFontSize(28); 
   doc.setTextColor(brandDarkBlueGray);
-  // FIX: Apply word wrapping to the main title
   const mainTitle = 'Your Quiz Results';
   const wrappedMainTitle = doc.splitTextToSize(mainTitle, 175);
   doc.text(wrappedMainTitle, 15, 55); 
@@ -57,10 +58,9 @@ export const exportResultsAsPDF = ({ type, preference }) => {
 
   let y = 68;
 
-  doc.setFontSize(18); // Larger text for personality type
+  doc.setFontSize(18); 
   doc.setTextColor(brandPrimaryBlue);
   doc.setFont('Inter', 'normal');
-  // FIX: Apply word wrapping as a precaution
   const personalityTypeText = `Your Personality Type: ${mbtiType}`;
   const wrappedPersonalityTypeText = doc.splitTextToSize(personalityTypeText, 175);
   doc.text(wrappedPersonalityTypeText, 15, y);
@@ -72,7 +72,6 @@ export const exportResultsAsPDF = ({ type, preference }) => {
     const found = mbtiData.careers.some(
       (c) => c.postSchoolPath?.toLowerCase() === preference.toLowerCase()
     );
-    // FIX: Apply word wrapping as a precaution
     const preferenceText = `Career Pathway Preference: ${
         found ? preference : `${preference} (no direct match found)`
       }`;
@@ -126,7 +125,7 @@ export const exportResultsAsPDF = ({ type, preference }) => {
     const isStarred = userPreference && c.postSchoolPath?.toLowerCase() === userPreference;
     const bullet = isStarred ? '★' : '•';
     const line = `${bullet} ${c.title} (${c.pathway})`;
-    doc.setTextColor(isStarred ? brandSecondaryBlue : brandTextColor); // Highlight the starred career
+    doc.setTextColor(isStarred ? brandSecondaryBlue : brandTextColor); 
     doc.text(line, 20, y);
     y += 8;
     if (y > pageHeight - 30) {
@@ -142,7 +141,6 @@ export const exportResultsAsPDF = ({ type, preference }) => {
 
   doc.setFontSize(16);
   doc.setTextColor(brandPrimaryBlue);
-  // FIX: Apply word wrapping to the career snapshot title
   const topCareerSnapshotTitle = `Top Career Snapshot: ${topCareer?.title || 'N/A'}`;
   const wrappedTopCareerSnapshotTitle = doc.splitTextToSize(topCareerSnapshotTitle, 175);
   doc.text(wrappedTopCareerSnapshotTitle, 15, y);
@@ -176,74 +174,38 @@ export const exportResultsAsPDF = ({ type, preference }) => {
   doc.text(wrappedNextStepText, 20, y);
   y += wrappedNextStepText.length * 8 + 12;
 
-  // Appendix Guide
-  const pathwayMap = {
-    college: 'College',
-    community: 'Community College',
-    trade: 'Trade School',
-    job: 'Direct Job Entry',
-  };
-  const pathwayToUse = preference || mbtiData.careers[0]?.postSchoolPath?.toLowerCase();
-  const guideKey = pathwayMap[pathwayToUse] || null;
-  const guideContent = guideKey ? GUIDES_TEXT_CONTENT[guideKey] : null;
+  // --- NEW Generic Call to Action Section ---
+  doc.addPage();
+  y = 30;
 
-  if (guideContent) {
-    doc.addPage();
-    let guideY = 25;
+  doc.setFontSize(24);
+  doc.setTextColor(brandPrimaryBlue);
+  doc.setFont('Poppins', 'bold');
+  const ctaHeader = 'Explore More Guides';
+  doc.text(ctaHeader, 15, y);
+  doc.line(15, y + 2, 195, y + 2);
+  y += 15;
 
-    doc.setFontSize(24);
-    doc.setTextColor(brandPrimaryBlue);
-    // FIX: Apply word wrapping to the appendix title
-    const appendixTitle = `Appendix: The ${guideKey} Guide`;
-    const wrappedAppendixTitle = doc.splitTextToSize(appendixTitle, 175);
-    doc.text(wrappedAppendixTitle, 15, guideY);
-    doc.line(15, guideY + 2, 195, guideY + 2);
-    guideY += wrappedAppendixTitle.length * 10 + 5; // Adjust Y position for multi-line headers
+  doc.setFontSize(14);
+  doc.setTextColor(brandTextColor);
+  doc.setFont('Inter', 'normal');
+  const ctaBodyText = 'Your results are just the beginning. Our website has a wealth of resources to help you find the perfect career and educational path. Discover your future!';
+  const wrappedCtaBodyText = doc.splitTextToSize(ctaBodyText, 175);
+  doc.text(wrappedCtaBodyText, 15, y);
+  y += wrappedCtaBodyText.length * 8 + 10;
 
-    const sections = guideContent.trim().split(/\n\s*##\s*/);
-    sections.forEach((section, index) => {
-      const lines = section.split('\n').filter((line) => line.trim() !== '');
-      if (lines.length === 0) return;
+  doc.setFontSize(12);
+  doc.setTextColor(brandPrimaryBlue);
+  doc.setFont('Inter', 'normal');
+  const ctaUrlText = `Explore all guides and resources at:`;
+  const wrappedCtaUrlText = doc.splitTextToSize(ctaUrlText, 175);
+  doc.text(wrappedCtaUrlText, 15, y);
+  doc.textWithLink(exploreURL, 15, y + 5, {
+    url: exploreURL,
+  });
+  y += 12;
 
-      let sectionTitle = lines[0].trim();
-      let sectionContent = lines.slice(1).join('\n').trim();
-
-      if (index === 0 && !sectionTitle.startsWith('#')) {
-        sectionTitle = 'Introduction';
-        sectionContent = section;
-      } else {
-        sectionTitle = sectionTitle.replace(/###\s*/, '').trim();
-      }
-
-      if (guideY > pageHeight - 40) {
-        doc.addPage();
-        guideY = 25;
-      }
-
-      doc.setFontSize(18);
-      doc.setTextColor(brandDarkBlueGray);
-      // FIX: Apply text wrapping to the section titles
-      const wrappedSectionTitle = doc.splitTextToSize(sectionTitle, 175);
-      doc.text(wrappedSectionTitle, 15, guideY);
-      guideY += wrappedSectionTitle.length * 8 + 2;
-
-      doc.setFontSize(12);
-      doc.setTextColor(brandTextColor);
-      const wrappedText = doc.splitTextToSize(sectionContent, 175);
-      wrappedText.forEach((line) => {
-        if (guideY > pageHeight - 20) {
-          doc.addPage();
-          guideY = 25;
-        }
-        doc.text(line, 15, guideY);
-        guideY += 8;
-      });
-
-      guideY += 12;
-    });
-  }
-
-  // Footer with page numbers and CTA
+  // --- Footer with page numbers and CTA ---
   const totalPages = doc.internal.getNumberOfPages();
   for (let i = 1; i <= totalPages; i++) {
     doc.setPage(i);
