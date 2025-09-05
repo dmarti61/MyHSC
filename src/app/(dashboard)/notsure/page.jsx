@@ -28,6 +28,16 @@ export const metadata = {
   },
 };
 
+// Define the pathways as a consistent array of objects.
+const pathways = [
+  { label: 'College Guide', path: '/collegeguide', text: 'What\'s a typical 4-year degree timeline?' },
+  { label: 'Two-Year College Guide', path: '/twoyear', text: 'Explore community colleges and their benefits.' },
+  { label: 'Trade School Guide', path: '/tradeschoolguide', text: 'How long are trade programs?' },
+  { label: 'Military Service', path: '/military', text: 'What are the basic options and timeframes?' },
+  { label: 'Work After High School', path: '/careers', text: 'What jobs can you get right after high school?' },
+  { label: 'Gap Year & Alternative Paths', path: '/gapyear', text: 'What\'s it like to take a year off?' },
+];
+
 const NotSure = () => {
   return (
     <div className="college-guide-container">
@@ -98,31 +108,13 @@ const NotSure = () => {
             Don't worry about applications. Just get a general sense of the different paths this website covers.
           </p>
           <div className="pathway-links">
-            <div className="pathway-item">
-              <Link href="/collegeguide" className="pathway-link">
-                <strong>College:</strong> What's a typical 4-year degree timeline?
-              </Link>
-            </div>
-            <div className="pathway-item">
-              <Link href="/tradeschoolguide" className="pathway-link">
-                <strong>Skilled Trades:</strong> How long are trade programs?
-              </Link>
-            </div>
-            <div className="pathway-item">
-              <Link href="/careers" className="pathway-link">
-                <strong>Direct Entry:</strong> What jobs can you get right after high school?
-              </Link>
-            </div>
-            <div className="pathway-item">
-              <Link href="/military" className="pathway-link">
-                <strong>Military:</strong> What are the basic options and timeframes?
-              </Link>
-            </div>
-            <div className="pathway-item">
-              <Link href="/gapyear" className="pathway-link">
-                <strong>Gap Year:</strong> What's it like to take a year off?
-              </Link>
-            </div>
+            {pathways.map((pathway) => (
+              <div className="pathway-item" key={pathway.path}>
+                <Link href={pathway.path} className="pathway-link">
+                  <strong>{pathway.label}:</strong> {pathway.text}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
 
