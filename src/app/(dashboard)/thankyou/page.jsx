@@ -27,6 +27,40 @@ export const metadata = {
   },
 };
 
+// Define the exploration steps as a clean array of objects.
+const explorationSteps = [
+  {
+    label: 'College Guide',
+    path: '/collegeguide',
+    description: 'Dive into the process of applying to and attending a 4-year university. Learn about applications, campus life, and what to expect.',
+  },
+  {
+    label: 'Two-Year College Guide',
+    path: '/twoyear',
+    description: 'Explore community colleges and junior colleges—a flexible and affordable path to a degree or career. Learn about transfer options, certifications, and local opportunities.',
+  },
+  {
+    label: 'Trade School Guide',
+    path: '/tradeschoolguide',
+    description: 'Discover a direct path to a high-demand career. Learn about trade schools, certifications, and hands-on training that can lead to great jobs.',
+  },
+  {
+    label: 'Military Service',
+    path: '/military',
+    description: 'Explore the different branches and how a career in the military can offer both professional development and financial benefits.',
+  },
+  {
+    label: 'Work After High School',
+    path: '/careers',
+    description: 'Not interested in more school right now? Find out how to jump directly into the workforce, build a career, and gain valuable experience without a degree.',
+  },
+  {
+    label: 'Gap Year & Alternative Paths',
+    path: '/gapyear',
+    description: 'Learn about taking a purposeful gap year to travel, volunteer, or work before deciding on your next step. Explore other alternative paths beyond traditional college.',
+  },
+];
+
 const QuizThankYou = () => {
   return (
     <div className="college-guide-container">
@@ -41,66 +75,29 @@ const QuizThankYou = () => {
       <p className="section-intro">
         Your quiz results are a fantastic starting point, but they are not the final word. We encourage you to explore all of these guides.
       </p>
-      
+
       <div className="exploration-steps">
-        <div className="exploration-item">
-          <p className="exploration-step-title">
-            <span className="step-number">1.</span>
-            <strong>College & University Guide</strong>
-          </p>
-          <p className="exploration-step-text">
-            Dive into the process of applying to and attending a 4-year university. Learn about applications, campus life, and what to expect.
-          </p>
-          <Link href="/collegeguide" className="cta-button">
-            Start the Guide
-          </Link>
-        </div>
-
-        <div className="exploration-item">
-          <p className="exploration-step-title">
-            <span className="step-number">2.</span>
-            <strong>Skilled Trades & Trade School Guide</strong>
-          </p>
-          <p className="exploration-step-text">
-            Discover a direct path to a high-demand career. Learn about trade schools, certifications, and hands-on training.
-          </p>
-          <Link href="/tradeschoolguide" className="cta-button">
-            Start the Guide
-          </Link>
-        </div>
-
-        <div className="exploration-item">
-          <p className="exploration-step-title">
-            <span className="step-number">3.</span>
-            <strong>Military & Service Paths</strong>
-          </p>
-          <p className="exploration-step-text">
-            Explore the different branches and how a career in the military can offer both professional development and financial benefits.
-          </p>
-          <Link href="/military" className="cta-button">
-            Start the Guide
-          </Link>
-        </div>
-
-        <div className="exploration-item">
-          <p className="exploration-step-title">
-            <span className="step-number">4.</span>
-            <strong>Gap Year & Direct Entry Careers</strong>
-          </p>
-          <p className="exploration-step-text">
-            Not sure about a structured program? Find out what it's like to take a year off or jump directly into the workforce.
-          </p>
-          <Link href="/gapyear" className="cta-button">
-            Start the Guide
-          </Link>
-        </div>
+        {explorationSteps.map((step, index) => (
+          <div className="exploration-item" key={step.path}>
+            <p className="exploration-step-title">
+              <span className="step-number">{index + 1}.</span>
+              <strong>{step.label}</strong>
+            </p>
+            <p className="exploration-step-text">
+              {step.description}
+            </p>
+            <Link href={step.path} className="cta-button">
+              Start the Guide
+            </Link>
+          </div>
+        ))}
       </div>
 
       <hr className="divider" />
 
       <h3 className="section-title">🚀 Ready for More?</h3>
       <p className="conclusion-text">
-        Don't forget to check out our <Link href="/financialaid">financial aid guide</Link> and our <Link href="/careers">career explorer</Link> to help you make your final decision. You've got this!
+        Don't forget to check out our <Link href="/financialaid">financial aid guide</Link> and our <Link href="/explore">career explorer</Link> to help you make your final decision. You've got this!
       </p>
       <div className="final-cta">
         <p>You can come back to this page anytime you need to.</p>
