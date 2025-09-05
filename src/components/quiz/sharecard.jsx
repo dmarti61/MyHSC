@@ -30,7 +30,7 @@ const ShareCard = ({
   return (
     <div className="share-card" role="region" aria-label="Share your quiz results">
       <h3>🚀 Your Personalized Career Packet Awaits!</h3>
-      <p>Download your full results, strengths, and a custom guide to your next step.</p>
+      <p>Download your full results, strengths, and a link to your custom guide to your next step.</p>
       <button onClick={handleDownload} className="share-card-button">
         Download My Career Packet
       </button>
