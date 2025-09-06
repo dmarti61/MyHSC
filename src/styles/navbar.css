@@ -253,6 +253,8 @@ li.active-parent > .nav-parent-wrapper > .nav-top-level-item {
     gap: 2rem;
     margin: 0;
     padding: 0;
+    flex-grow: 1;
+    justify-content: center;
   }
   .nav-links li { border-bottom: none; position: relative; }
 
