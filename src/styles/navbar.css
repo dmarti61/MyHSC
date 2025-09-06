@@ -265,7 +265,6 @@ li.active-parent > .nav-parent-wrapper > .nav-top-level-item {
     padding: 1rem 0;
     border: none;
     width: auto;
-    justify-content: center;
     background: none;
     color: var(--text-light);
   }
