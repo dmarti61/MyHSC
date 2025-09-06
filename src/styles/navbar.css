@@ -230,7 +230,6 @@ li.active-parent > .nav-parent-wrapper > .nav-top-level-item {
   .hamburger, .nav-close-container, .nav-overlay { display: none; }
 
   .nav-links {
-    position: static;
     transform: none;
     width: auto;
     max-width: none;
