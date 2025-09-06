@@ -247,7 +247,7 @@ li.active-parent > .nav-parent-wrapper > .nav-top-level-item {
 
   .nav-links-scroll-wrapper { flex-grow: 1; overflow: visible; padding: 0; }
 
-  .nav-links > ul {
+  .nav-links-scroll-wrapper > ul {
     display: flex;
     flex-direction: row;
     align-items: center;
