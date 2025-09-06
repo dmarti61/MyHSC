@@ -224,12 +224,13 @@ li.active-parent > .nav-parent-wrapper > .nav-top-level-item {
 
 /* Desktop Styles */
 @media (min-width: 901px) {
-  .navbar { justify-content: flex-start; }
+  .navbar { justify-content: space-between; }
   .navbar-header { width: auto; flex-shrink: 0; }
 
   .hamburger, .nav-close-container, .nav-overlay { display: none; }
 
   .nav-links {
+    position: static;
     transform: none;
     width: auto;
     max-width: none;
@@ -241,6 +242,7 @@ li.active-parent > .nav-parent-wrapper > .nav-top-level-item {
     flex-direction: row;
     align-items: center;
     flex-grow: 1;
+    justify-content: center;
   }
 
   .nav-links-scroll-wrapper { flex-grow: 1; overflow: visible; padding: 0; }
@@ -252,8 +254,6 @@ li.active-parent > .nav-parent-wrapper > .nav-top-level-item {
     gap: 2rem;
     margin: 0;
     padding: 0;
-    flex-grow: 1;
-    justify-content: center;
   }
   .nav-links li { border-bottom: none; position: relative; }
 
