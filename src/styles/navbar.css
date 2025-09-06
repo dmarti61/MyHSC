@@ -251,6 +251,7 @@ li.active-parent > .nav-parent-wrapper > .nav-top-level-item {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
     margin: 0;
     padding: 0;
