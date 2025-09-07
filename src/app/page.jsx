@@ -7,23 +7,23 @@ import HomeDynamic from './homedynamic';
 export const metadata = {
   // The Title tag is the most important element for SEO.
   // Use your primary keywords and brand name.
-  title: 'My HS Counselor: Find Your Career Path After High School',
+  title: 'My HS Counselor: Career Path & Personality Quiz for High School Students',
 
   // The description is what shows up in Google search results. Make it compelling!
-  description: 'Confused about your future? Our unique personality quiz helps high school students find the right path—college, trade school, or military—based on their strengths and interests. Get your personalized roadmap today.',
+  description: 'Find your career path after high school with our free personality quiz. Discover options for college, trade school, or the military based on your strengths and interests. Get a personalized career roadmap today.',
   
   // Open Graph (OG) tags are for social media sharing. They make your link look professional on platforms like Facebook and X (formerly Twitter).
   openGraph: {
-    title: 'My HS Counselor: Find Your Career Path After High School',
-    description: 'Get matched with a career path that fits your unique personality and interests. Our 24-question quiz provides actionable roadmaps for high school students.',
+    title: 'Find Your Future: Free Career Quiz for High Schoolers | My HS Counselor',
+    description: 'Our 24-question quiz helps high school students discover their ideal career path. Get a custom roadmap for college, trade school, or the military. Start your journey today!',
     url: 'https://www.myhscounselor.com', // Replace with your actual domain
     siteName: 'My HS Counselor',
     images: [
       {
-        url: 'https://www.myhscounselor.com/public/D6C51617-B041-4F51-B3C8-6F1281FC80DD.png', // Create a good quality image for social media
+        url: 'https://www.myhscounselor.com/public/og-image.png', // Suggestion for a new image name
         width: 1200,
         height: 630,
-        alt: 'High school students looking confidently at a roadmap.',
+        alt: 'High school student confidently choosing a career path.',
       },
     ],
     locale: 'en_US',
