@@ -2,13 +2,13 @@
 
 export const metadata = {
   // Primary SEO tags
-  title: 'My HS Counselor: Your Post-High School Guidance & Career Toolkit',
-  description: 'My HS Counselor provides students with a complete guide to post-high school life. Explore career paths, college applications, trade schools, gap years, and financial aid resources to build your future with confidence.',
+  title: 'My HS Counselor: Career Quiz & Guidance for High School Students',
+  description: 'Confused about your future? Take our free career quiz to discover your path. Explore guides on college, trade school, military, and financial aid. Get personalized advice to confidently plan your future.',
   
   // Open Graph tags for social media sharing
   openGraph: {
-    title: 'My HS Counselor: Your Post-High School Guidance & Career Toolkit',
-    description: 'A comprehensive resource for high school students exploring college, trades, careers, and personal growth. Get the tools you need to build a confident future.',
+    title: 'Discover Your Path: Free Career Quiz for High School Students | My HS Counselor',
+    description: 'Get matched with your ideal career path based on your unique personality and interests. Our guides cover college, trade schools, and the military. Start your future today.',
     url: 'https://myhscounselor.com',
     siteName: 'My HS Counselor',
     images: [
@@ -16,7 +16,7 @@ export const metadata = {
         url: 'https://myhscounselor.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'My HS Counselor logo and tagline, "Your Post-High School Guidance & Career Toolkit"',
+        alt: 'High school student confidently planning their future with My HS Counselor.',
       },
     ],
     locale: 'en_US',
@@ -26,10 +26,10 @@ export const metadata = {
   // Twitter Card tags for Twitter previews
   twitter: {
     card: 'summary_large_image',
-    site: '@yourtwitterhandle',
-    creator: '@yourtwitterhandle',
-    title: 'My HS Counselor: Your Post-High School Guidance & Career Toolkit',
-    description: 'A comprehensive resource for high school students exploring college, trades, careers, and personal growth. Get the tools you need to build a confident future.',
+    site: '@yourtwitterhandle', // Make sure to update this!
+    creator: '@yourtwitterhandle', // Make sure to update this!
+    title: 'Free Career Quiz & Guides for High Schoolers | My HS Counselor',
+    description: 'Find your future faster. Take our quiz to get a personalized roadmap for college, trade school, or the military.',
     images: ['https://myhscounselor.com/og-image.jpg'],
   },
 
