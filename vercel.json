@@ -59,6 +59,6 @@
       "source": "/first-months",
       "destination": "/firstmonths",
       "permanent": true
-    },
+    }
   ]
 }
