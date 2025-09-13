@@ -1,0 +1,64 @@
+{
+  "redirects": [
+    {
+      "source": "/not-sure",
+      "destination": "/notsure",
+      "permanent": true
+    },
+    {
+      "source": "/college-guide",
+      "destination": "/collegeguide",
+      "permanent": true
+    },
+    {
+      "source": "/two-year",
+      "destination": "/twoyear",
+      "permanent": true
+    },
+    {
+      "source": "/trade",
+      "destination": "/tradeschoolguide",
+      "permanent": true
+    },
+    {
+      "source": "/direct-entry-careers",
+      "destination": "/careers",
+      "permanent": true
+    },
+    {
+      "source": "/gap-year",
+      "destination": "/gapyear",
+      "permanent": true
+    },
+    {
+      "source": "/explore-careers",
+      "destination": "/explore",
+      "permanent": true
+    },
+    {
+      "source": "/talk-templates",
+      "destination": "/talktemplates",
+      "permanent": true
+    },
+    {
+      "source": "/financial-aid",
+      "destination": "/financialaid",
+      "permanent": true
+    },
+    {
+      "source": "/decision-official",
+      "destination": "/decisionofficial",
+      "permanent": true
+    },
+    {
+      "source": "/job-search",
+      "destination": "/jobsearch",
+      "permanent": true
+    },
+    {
+      "source": "/first-months",
+      "destination": "/firstmonths",
+      "permanent": true
+    },
+  ]
+}
